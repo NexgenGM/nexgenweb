@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <style>
+      img:is([sizes="auto"i], [sizes^="auto,"i]) {
+        contain-intrinsic-size: 3000px 1500px
+      }
+    </style>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>NexGen</title>
+
+    <script>
+      document.onkeydown = function(e) {
+          // Disable F12, Ctrl + Shift + I
+          if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
+              e.preventDefault();
+              alert("You cannot access developer tools!");
+          }
+      };
+  </script>
+    <style id='wp-emoji-styles-inline-css' type='text/css'>
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+      #translator-popup {
+        display: none !important;
+    }
+    
+    </style>
+    <style id='classic-theme-styles-inline-css' type='text/css'>
+      /*! This file is auto-generated */
+      .wp-block-button__link {
+        color: #fff;
+        background-color: #32373c;
+        border-radius: 9999px;
+        box-shadow: none;
+        text-decoration: none;
+        padding: calc(.667em + 2px) calc(1.333em + 2px);
+        font-size: 1.125em
+      }
+
+      .wp-block-file__button {
+        background: #32373c;
+        color: #fff;
+        text-decoration: none
+      }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel='stylesheet' id='nexgen-style-css' href='style.css' type='text/css' media='all' />
+    <style id='akismet-widget-style-inline-css' type='text/css'>
+      .a-stats {
+        --akismet-color-mid-green: #357b49;
+        --akismet-color-white: #fff;
+        --akismet-color-light-grey: #f6f7f7;
+        max-width: 350px;
+        width: auto;
+      }
+
+      .a-stats * {
+        all: unset;
+        box-sizing: border-box;
+      }
+
+      .a-stats strong {
+        font-weight: 600;
+      }
+
+      .a-stats a.a-stats__link,
+      .a-stats a.a-stats__link:visited,
+      .a-stats a.a-stats__link:active {
+        background: var(--akismet-color-mid-green);
+        border: none;
+        box-shadow: none;
+        border-radius: 8px;
+        color: var(--akismet-color-white);
+        cursor: pointer;
+        display: block;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        padding: 12px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      /* Extra specificity to deal with TwentyTwentyOne focus style */
+      .widget .a-stats a.a-stats__link:focus {
+        background: var(--akismet-color-mid-green);
+        color: var(--akismet-color-white);
+        text-decoration: none;
+      }
+
+      .a-stats a.a-stats__link:hover {
+        filter: brightness(110%);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.16);
+      }
+
+      .a-stats .count {
+        color: var(--akismet-color-white);
+        display: block;
+        font-size: 1.5em;
+        line-height: 1.4;
+        padding: 0 13px;
+        white-space: nowrap;
+      }
+    </style>
+    
+    <link rel="icon" href="/wp-content/uploads/2020/04/logo.png" sizes="32x32" />
+    <link rel="icon" href="/wp-content/uploads/2020/04/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/wp-content/uploads/2020/04/logo.png" />
+    <meta name="msapplication-TileImage" content="/wp-content/uploads/2020/04/logo.png" />
+
+  </head>
+
+<body class="page-template page-template-template-page-portfolio page-template-template-page-portfolio-php page page-id-2472 elementor-default elementor-kit-2218 elementor-page elementor-page-2472">
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball--big ">
+            <svg height="35" width="30">
+	      <circle cx="15" cy="20" r="12" stroke-width="0"></circle>
+	    </svg>
+        </div>
+        <div class="cursor__ball cursor__ball--small">
+            <svg height="10" width="10">
+	      <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+	    </svg>
+        </div>
+    </div>
+    <canvas id="noise" class="noise"></canvas>
+    <div class="nav-inside">
+
+        
+      <div class="nav__content">
+        <ul class="nav__list">
+          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
+            <a href="index.html">Home</a>
+          </li>
+          <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-66 current_page_item menu-item-68">
+            <a href="event.html" > Upcoming Events </a>
+          </li>
+          <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-66 current_page_item menu-item-68">
+            <a href="recent.html" > Recnt Events </a>
+          </li>
+          <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
+            <a href="about.html">About</a>
+          </li>
+          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
+            <a href="gallery.html">Gallery</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="page" class="container is-fluid is-marginless">
+
+        <div id="page" class="container is-fluid is-marginless">
+            <header id="nexgen-header" class="columns is-fluid is-marginless">
+              <div class="column is-mobile is-vcentered">
+                <div class="columns is-mobile is-vcentered">
+                  <div id="logo-nexgen" class="column">
+                    <div class="logo-nexgen">
+                      <a href="index.html" rel="home">
+                        <img src="/wp-content/uploads/2020/04/logo.png" alt="nexgen" class="logo hoverable" />
+                      </a>
+                    </div>
+                  </div>
+                  <!-- .site-branding -->
+                  <div class="column is-narrow">
+                    <!--	<nav id="site-navigation"><div class="menu-main-menu-pt-container"><ul id="primary-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-66 current_page_item menu-item-68"><a href="/quem-somos/" aria-current="page">Quem Somos</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="/portfolio/">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="/casos-de-sucesso/">Casos de Sucesso</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a href="/blog/">Blog</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="/contactos/">Contactos</a></li><li class="menu-item wpml-ls-slot-2 wpml-ls-item wpml-ls-item-en wpml-ls-menu-item wpml-ls-first-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-2-en"><a href="/en/about-us/" title="Switch to English"><span class="wpml-ls-native" lang="en">English</span></a></li></ul></div></nav>-->
+                    <div class="nav-but-wrap hoverable">
+                      <div class="menu-icon hover-target">
+                        <span class="menu-icon__line menu-icon__line-left"></span>
+                        <span class="menu-icon__line"></span>
+                        <span class="menu-icon__line menu-icon__line-right"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- #site-navigation -->
+            </header>
+        <!-- #masthead -->
+        <div id="content" class="content div-top-middle">
+            <div id="loader-wrapper">
+                <div id="loader">
+                    <div class="symbol-nexgen">
+                        <img id="loading" src="/wp-content/uploads/2020/04/logo.png" alt="nexgen logo" class="logo" />
+                    </div>
+                </div>
+
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+            </div>
+
+
+            <script>
+                document.documentElement.className = "js";
+                var supportsCssVars = function() {
+                    var e, t = document.createElement("style");
+                    return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+                };
+                supportsCssVars() || alert("Please view this website in a modern browser that supports CSS Variables.");
+            </script>
+            <svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+				<path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+			</symbol>
+			<symbol id="icon-longarrow" viewBox="0 0 54 24">
+				<title>longarrow</title>
+				<path d="M.42 11.158L12.38.256c.333-.27.696-.322 1.09-.155.395.166.593.467.593.903v6.977h38.87c.29 0 .53.093.716.28.187.187.28.426.28.716v5.98c0 .29-.093.53-.28.716a.971.971 0 0 1-.716.28h-38.87v6.977c0 .416-.199.717-.592.903-.395.167-.759.104-1.09-.186L.42 12.62a1.018 1.018 0 0 1 0-1.462z" />
+			</symbol>
+			<symbol id="icon-navarrow" viewBox="0 0 408 408">
+				<title>navarrow</title>
+				<polygon fill="#fff" fill-rule="nonzero" points="204 0 168.3 35.7 311.1 178.5 0 178.5 0 229.5 311.1 229.5 168.3 372.3 204 408 408 204"></polygon>
+			</symbol>
+		</svg>
+            <main id="nexgen-portfolio">
+                <div class="slideshow">
+                    <div class="slideshow__deco"></div>
+
+                    <div class="slide hoverable">
+                        <div class="slide__img-wrap">
+                            <div class="slide__img" style="background-image: url('/wp-content/uploads/NILPhotos/Chess\ Tournament.jpg');"></div>
+                        </div>
+                        <div class="slide__side"> Chess Tournament </div>
+                        <div class="slide__title-wrap">
+                            <span class="slide__number">1</span>
+                            <h3 class="slide__title"> CHESS TOURNAMENT </h3>
+                            <h4 class="slide__subtitle"> Coming Soon... </h4>
+                        </div>
+                    </div>
+
+
+
+                    <div class="slide hoverable">
+                        <div class="slide__img-wrap">
+                            <div class="slide__img" style="background-image: url('/wp-content/uploads/NILPhotos/CODE-COONECT.png');"></div>
+                        </div>
+                        <div class="slide__side"> Hackathon </div>
+                        <div class="slide__title-wrap">
+                            <span class="slide__number">2</span>
+                            <h3 class="slide__title"> CODE CONNECT </h3>
+                            <h4 class="slide__subtitle"> Coming Soon...</h4>
+                        </div>
+                    </div>
+
+
+
+                    <div class="slide hoverable">
+                        <div class="slide__img-wrap">
+                            <div class="slide__img" style="background-image: url('/wp-content/uploads/NILPhotos/OPEN\ MIC.jpg');"></div>
+                        </div>
+                        <div class="slide__side"> Showcase Your Talent </div>
+                        <div class="slide__title-wrap">
+                            <span class="slide__number">3</span>
+                            <h3 class="slide__title"> Open Mic </h3>
+                            <h4 class="slide__subtitle"> Coming Soon...</h4>
+                        </div>
+                    </div>
+
+
+
+                    <div class="slide hoverable">
+                        <div class="slide__img-wrap">
+                            <div class="slide__img" style="background-image: url('/wp-content/uploads/NILPhotos/QUIZ\ TIME.jpg');"></div>
+                        </div>
+                        <div class="slide__side"> Common Sense With Knowledge </div>
+                        <div class="slide__title-wrap">
+                            <span class="slide__number">4</span>
+                            <h3 class="slide__title"> Quiz Time </h3>
+                            <h4 class="slide__subtitle"> Coming Soon... </h4>
+                        </div>
+                    </div>
+
+
+
+                    <div class="slide hoverable">
+                        <div class="slide__img-wrap">
+                            <div class="slide__img" style="background-image: url('/wp-content/uploads/NILPhotos/Debate\ Comp.jpg');"></div>
+                        </div>
+                        <div class="slide__side"> Talk with Logic </div>
+                        <div class="slide__title-wrap">
+                            <span class="slide__number">5</span>
+                            <h3 class="slide__title"> Debate Competition</h3>
+                            <h4 class="slide__subtitle">Coming Soon....</h4>
+                        </div>
+                    </div>
+
+
+
+                    <div class="slide hoverable">
+                        <div class="slide__img-wrap">
+                            <div class="slide__img" style="background-image: url('/wp-content/uploads/NILPhotos/AlgoArena.jpg');"></div>
+                        </div>
+                        <div class="slide__side">Coding Competition</div>
+                        <div class="slide__title-wrap">
+                            <span class="slide__number">6</span>
+                            <h3 class="slide__title"> Algo Arena </h3>
+                            <h4 class="slide__subtitle"> Coming Soon ...</h4>
+                        </div>
+                    </div>
+
+
+
+                    <div class="slide hoverable">
+                        <div class="slide__img-wrap">
+                            <div class="slide__img" style="background-image: url('/wp-content/uploads/2020/08/maimo0-1.jpg');"></div>
+                        </div>
+                        <div class="slide__side">CRM &amp; ERP &amp; Website</div>
+                        <div class="slide__title-wrap">
+                            <span class="slide__number">7</span>
+                            <h3 class="slide__title">Integrated Platform with Website + CRM + ERP </h3>
+                            <h4 class="slide__subtitle">Powerful platform for real estate that combin ...</h4>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <button id="prev-button-portfolio" class="nav nav--prev hoverable">
+					<svg class="icon icon--navarrow-prev">
+						<use xlink:href="#icon-navarrow"></use>
+					</svg>
+				</button>
+                    <button id="next-button-portfolio" class="nav nav--next hoverable">
+					<svg class="icon icon--navarrow-next">
+						<use xlink:href="#icon-navarrow"></use>
+					</svg>
+				</button>
+                </div>
+                <div class="content">
+
+
+                    <div class="content__item">
+                        <span class="content__number">1</span>
+                        <h3 class="content__title"> Chess Tournamnet </h3>
+                        <h4 class="content__subtitle">The NexGen community’s chess tournament is more than a game — it’s a platform to spark strategic thinking, sharpen focus, and build mental resilience. By bringing students together in a battle of minds, it fosters healthy competition and meaningful connections, adding real value to campus life.</h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/artificial-intelligence-on-sns24/">	
+
+                                  <button onclick="window.open('https://forms.gle/mZLCYyGpCHRpMgMz8', '_blank')" class="hoverable">
+                                    REGISTER HERE
+                                  </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content__item">
+                        <span class="content__number">2</span>
+                        <h3 class="content__title"> Code Connect  </h3>
+                        <h4 class="content__subtitle">The *CodeConnect* fosters a spirit of healthy competition, collaboration, and innovation among students in the field of computer science. It provides a platform for participants to apply their coding skills, solve real-world problems, and enhance their logical thinking and teamwork. Beyond technical growth, it also strengthens peer connections and builds confidence—preparing students for future academic and professional challenges in a fun and engaging way.</h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/certified-online-training-for-companies/">	
+                                  <button onclick="window.open('https://forms.gle/mZLCYyGpCHRpMgMz8', '_blank')" class="hoverable">
+                                    REGISTER HERE
+                                  </button>
+			</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content__item">
+                        <span class="content__number">3</span>
+                        <h3 class="content__title"> Open Mic </h3>
+                        <h4 class="content__subtitle">🎤 Unmute Yourself!
+                          Step into the spotlight and let your talent speak.
+                          Poetry, music, stand-up, storytelling — your stage, your vibe.
+                          Open Mic Night – Where every voice matters.</h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/dynamic-website/">	
+                                  <button onclick="window.open('https://forms.gle/mZLCYyGpCHRpMgMz8', '_blank')" class="hoverable">
+                                    REGISTER HERE
+                                  </button>
+			</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content__item">
+                        <span class="content__number">4</span>
+                        <h3 class="content__title"> Quiz Time </h3>
+                        <h4 class="content__subtitle"> Unlock the Power of Knowledge!
+                          Quizzes aren’t just about right or wrong — they’re about curiosity, confidence, and quick thinking. Whether you're a trivia wizard or just love learning something new, this is your chance to challenge your brain, compete with your peers, and celebrate the thrill of discovery. Join us for an exciting quiz session where every question takes you one step closer to greatness! </h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/ecommerce-platform-with-specific-purchase-process/">	
+                                  <button onclick="window.open('https://forms.gle/mZLCYyGpCHRpMgMz8', '_blank')" class="hoverable">
+                                    REGISTER HERE
+                                  </button>
+			</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content__item">
+                        <span class="content__number">5</span>
+                        <h3 class="content__title">ERP integration from PHC and WooCommerce</h3>
+                        <h4 class="content__subtitle">Complex integration between WordPress and PHC, with real-time communications of schedules for scheduling appointments, WooCommerce invoices and viewing various information in each customer's account</h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/erp-integration-from-phc-and-woocommerce/">	
+                                  <button onclick="window.open('https://forms.gle/mZLCYyGpCHRpMgMz8', '_blank')" class="hoverable">
+                                    REGISTER HERE
+                                  </button>
+			</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content__item">
+                        <span class="content__number">6</span>
+                        <h3 class="content__title">Events Clustering Platform</h3>
+                        <h4 class="content__subtitle">In addition to gathering events from different platforms, Coolture, which is currently in its second version of the platform, is also a place where exclusive opinion articles can be found.</h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/events-clustering-platform/">	
+                                  <button onclick="window.open('https://forms.gle/mZLCYyGpCHRpMgMz8', '_blank')" class="hoverable">
+                                    REGISTER HERE
+                                  </button>
+			</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content__item">
+                        <span class="content__number">7</span>
+                        <h3 class="content__title">Integrated Platform with Website + CRM + ERP</h3>
+                        <h4 class="content__subtitle">Powerful platform for real estate that combines CRM functionalities with multiple other ERP and also has a complete integrated website</h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/integrated-platform-with-website-crm-erp/">	
+				<button class="hoverable">
+					+ Info				</button>
+			</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content__item">
+                        <span class="content__number">8</span>
+                        <h3 class="content__title">Internal Management System</h3>
+                        <h4 class="content__subtitle">Platform that aims to optimize the internal management of Vpelículos' business, fully integrated with APP (Android and iOS) for greater agility and freedom in the execution of internal tasks</h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/internal-management-system/">	
+				<button class="hoverable">
+					+ Info				</button>
+			</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content__item">
+                        <span class="content__number">9</span>
+                        <h3 class="content__title">MultiOpticas Platform</h3>
+                        <h4 class="content__subtitle">Ecommerce platform with integration with all customer records of physical stores (eg consultations, sales, etc.) as well as specific remarketing strategies for the business area</h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/multiopticas-platform/">	
+				<button class="hoverable">
+					+ Info				</button>
+			</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content__item">
+                        <span class="content__number">10</span>
+                        <h3 class="content__title">Multiple platforms for APAN association</h3>
+                        <h4 class="content__subtitle">Online member management, knowledge base with file management, access to areas restricted to registered users, training registrations, etc.</h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/multiple-platforms-for-apan-association/">	
+				<button class="hoverable">
+					+ Info				</button>
+			</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content__item">
+                        <span class="content__number">11</span>
+                        <h3 class="content__title">Personalized Tours Platform</h3>
+                        <h4 class="content__subtitle">Powerful highly innovative platform worldwide for creating personalized tours with a simple and complete management system.</h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/personalized-tours-platform/">	
+				<button class="hoverable">
+					+ Info				</button>
+			</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content__item">
+                        <span class="content__number">12</span>
+                        <h3 class="content__title">Platform with statistical data</h3>
+                        <h4 class="content__subtitle">Statistical data in graphs, candidate management, jury and accreditation of candidates entry on the day of the event.</h4>
+                        <div class="content__text">
+                            <div class="text-inside" id="inside-contents">
+                            </div>
+                            <div class="content__button">
+                                <a class="content__redirect" href="/en/project/platform-with-statistical-data/">	
+				<button class="hoverable">
+					+ Info				</button>
+			</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button class="content__close hoverable">
+					<svg class="icon icon--longarrow">
+						<use xlink:href="#icon-longarrow"></use>
+					</svg>
+				</button>
+                </div>
+            </main>
+
+
+
+            <div class="scroll-to-top hoverable"></div>
+        </div>
+        <!-- #content -->
+                  
+        <!-- #primary -->
+        <div class="scroll-to-top hoverable"></div>
+      </div>
+      <!-- #content -->
+      <footer class="footer-nexgen">
+        <div class="content has-text-centered">
+          <div id="footer-social" class="col">
+            <a href="https://www.facebook.com/genpt" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/yourusername/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+           <!-- Website Hyperlink Icon -->
+            <a href="https://www.example.com" target="_blank">
+              <i class="fas fa-link"></i>
+            </a>
+
+          </div>
+          
+          <div class="footer-flags">
+            <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-touch-device wpml-ls-legacy-list-horizontal">
+              <ul>
+                <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
+                  <!-- <a href="/en/about-us/" class="wpml-ls-link">
+                    <img class="wpml-ls-flag" src="/wp-content/uploads/2020/04/logo.png" alt="Inglês" width=1000 height=30 />
+                  </a> -->
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p> NexGen &copy; 2025 - <a href="tel:00351218640637">+351 218 640 637</a> - <a href="mailto:geral@nexgen.pt">geral@nexgen.pt</a>
+            <br>
+            <small>(Department Of Computer Science & Application , Gour Mahavidyalaya)</small>
+          </p>
+        </div>
+      </footer>        <!-- #colophon -->
+    </div>
+    <!-- #page -->
+
+
+    <span class="ht_ctc_chat_data" data-no_number="" data-settings="{&quot;number&quot;:&quot;351917906156&quot;,&quot;pre_filled&quot;:&quot;Ol\u00e1, visitei o site da nexgen, estava na p\u00e1gina &amp;quot;Portfolio&amp;quot; e gostaria de falar um pouco. Pode ajudar-me?&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;display: none; cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 40px; left: 40px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 150px; right: 10px;&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:&quot;no-show-effects&quot;,&quot;ani&quot;:&quot;no-animations&quot;,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}"></span>
+
+
+   
+
+    <script type="text/javascript" src="vendor.min.js" id="nexgen-vendor-js"></script>
+    <script type="text/javascript" id="nexgen-main-js-extra">
+        /* <![CDATA[ */
+        var nexgen_main = {
+            "page": "portfolio",
+            "is_404": ""
+        };
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="main.fixed.js" id="nexgen-main-js"></script>
+    <!-- <script type="text/javascript" src="https://www.nexgen.pt/wp-includes/js/dist/vendor/wp-polyfill.min.js" id="wp-polyfill-js"></script> -->
+
+
+</body>
+
+</html>

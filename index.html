@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+      img:is([sizes="auto"i], [sizes^="auto,"i]) {
+        contain-intrinsic-size: 3000px 1500px
+      }
+    </style>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>NexGen</title>
+
+    <script>
+      document.onkeydown = function(e) {
+          // Disable F12, Ctrl + Shift + I
+          if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
+              e.preventDefault();
+              alert("You cannot access developer tools!");
+          }
+      };
+  </script>
+    <style id='wp-emoji-styles-inline-css' type='text/css'>
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+      #translator-popup {
+        display: none !important;
+    }
+    
+    </style>
+    <style id='classic-theme-styles-inline-css' type='text/css'>
+      /*! This file is auto-generated */
+      .wp-block-button__link {
+        color: #fff;
+        background-color: #32373c;
+        border-radius: 9999px;
+        box-shadow: none;
+        text-decoration: none;
+        padding: calc(.667em + 2px) calc(1.333em + 2px);
+        font-size: 1.125em
+      }
+
+      .wp-block-file__button {
+        background: #32373c;
+        color: #fff;
+        text-decoration: none
+      }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel='stylesheet' id='nexgen-style-css' href='style.css' type='text/css' media='all' />
+    <style id='akismet-widget-style-inline-css' type='text/css'>
+      .a-stats {
+        --akismet-color-mid-green: #357b49;
+        --akismet-color-white: #fff;
+        --akismet-color-light-grey: #f6f7f7;
+        max-width: 350px;
+        width: auto;
+      }
+
+      .a-stats * {
+        all: unset;
+        box-sizing: border-box;
+      }
+
+      .a-stats strong {
+        font-weight: 600;
+      }
+
+      .a-stats a.a-stats__link,
+      .a-stats a.a-stats__link:visited,
+      .a-stats a.a-stats__link:active {
+        background: var(--akismet-color-mid-green);
+        border: none;
+        box-shadow: none;
+        border-radius: 8px;
+        color: var(--akismet-color-white);
+        cursor: pointer;
+        display: block;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        padding: 12px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      /* Extra specificity to deal with TwentyTwentyOne focus style */
+      .widget .a-stats a.a-stats__link:focus {
+        background: var(--akismet-color-mid-green);
+        color: var(--akismet-color-white);
+        text-decoration: none;
+      }
+
+      .a-stats a.a-stats__link:hover {
+        filter: brightness(110%);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.16);
+      }
+
+      .a-stats .count {
+        color: var(--akismet-color-white);
+        display: block;
+        font-size: 1.5em;
+        line-height: 1.4;
+        padding: 0 13px;
+        white-space: nowrap;
+
+      }
+      #particles-js canvas {
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: -1;
+}
+
+
+
+    </style>
+    
+    <link rel="icon" href="logo.png" sizes="32x32" />
+    <link rel="icon" href="logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="logo.png" />
+    <meta name="msapplication-TileImage" content="logo.png" />
+
+  </head>
+  <body class="">
+    <div class="cursor">
+      <div class="cursor__ball cursor__ball--big ">
+        <svg height="35" width="30">
+          <circle cx="15" cy="20" r="12" stroke-width="0"></circle>
+        </svg>
+      </div>
+      <div class="cursor__ball cursor__ball--small">
+        <svg height="10" width="10">
+          <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+        </svg>
+      </div>
+    </div>
+    <canvas id="noise" class="noise"></canvas>
+    <div class="nav-inside">
+      <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
+
+      
+      <script>
+        particlesJS("particles-js", {
+          particles: {
+            number: {
+              value: 90,
+              density: { enable: true, value_area: 800 }
+            },
+            color: {
+              value: ["#ff8080", "#80ff80", "#8080ff"] // pastel red, green, blue
+            },
+            shape: {
+              type: "circle"
+            },
+            opacity: {
+              value: 0.7
+            },
+            size: {
+              value: 3,
+              random: true,
+              anim: {
+                enable: true,
+                speed: 3,
+                size_min: 0.3,
+                sync: false
+              }
+            },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#8888ff", // choose a nice blend or your favorite color
+              opacity: 0.6,
+              width: 1.2
+            },
+            move: {
+              enable: true,
+              speed: 4,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out"
+            }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "grab"
+              },
+              onclick: { enable: false },
+              resize: true
+            },
+            modes: {
+              grab: {
+                distance: 200,
+                line_linked: {
+                  opacity: 1
+                }
+              }
+            }
+          },
+          retina_detect: true
+        });
+      </script>
+      
+
+      
+      
+      
+      <div class="nav__content">
+        <ul class="nav__list">
+          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
+            <a href="index.html">Home</a>
+          </li>
+          <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-66 current_page_item menu-item-68">
+            <a href="event.html" >Event</a>
+          </li>
+          <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
+            <a href="about.html">About</a>
+          </li>
+          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
+            <a href="gallery.html">Gallery</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="page" class="container is-fluid is-marginless">
+      <header id="nexgen-header" class="columns is-fluid is-marginless">
+        <div class="column is-mobile is-vcentered">
+          <div class="columns is-mobile is-vcentered">
+            <div id="logo-nexgen" class="column">
+              <div class="logo-nexgen">
+                <a href="index.html" rel="home">
+                  <img src="logo.png" alt="nexgen" class="logo hoverable" />
+                </a>
+              </div>
+            </div>
+            <!-- .site-branding -->
+            <div class="column is-narrow">
+              <!--	<nav id="site-navigation"><div class="menu-main-menu-pt-container"><ul id="primary-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-66 current_page_item menu-item-68"><a href="/quem-somos/" aria-current="page">Quem Somos</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="/portfolio/">Portfolio</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="/casos-de-sucesso/">Casos de Sucesso</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a href="/blog/">Blog</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="/contactos/">Contactos</a></li><li class="menu-item wpml-ls-slot-2 wpml-ls-item wpml-ls-item-en wpml-ls-menu-item wpml-ls-first-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-2-en"><a href="/en/about-us/" title="Switch to English"><span class="wpml-ls-native" lang="en">English</span></a></li></ul></div></nav>-->
+              <div class="nav-but-wrap hoverable">
+                <div class="menu-icon hover-target">
+                  <span class="menu-icon__line menu-icon__line-left"></span>
+                  <span class="menu-icon__line"></span>
+                  <span class="menu-icon__line menu-icon__line-right"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- #site-navigation -->
+      </header>
+      <!-- #masthead -->
+      <div id="content" class="content div-top-middle">
+        <div id="loader-wrapper">
+          <div id="loader">
+            <div class="symbol-nexgen">
+              <img id="loading" src="logo.png" alt="nexgen logo" class="logo" />
+            </div>
+          </div>
+          <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div>
+        </div>
+        <canvas class="part"></canvas>
+        <div class="mouse"></div>
+        <div id="primary" class="section">
+          <main id="main" class="container is-marginless is-fluid">
+            <div class="shadow-title parallax-top-shadow">GMDCSA</div>
+            <div class="section full-height">
+              <div class="section-title-wrap">
+                <div class="container">
+                  <div class="columns">
+                    <div class="column parallax-fade-top">
+                      <div class="sub-heading">Let's Code ,Create & Celebrate Together</div>
+                      <h1>NEXGEN</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="text-gray-600 body-font">
+              <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-col text-center w-full mb-20">
+                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
+                  <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+                </div>
+                <div class="flex flex-wrap -m-4 camera-reel">
+                  <!-- Cards go here -->
+                  <div class="lg:w-1/3 sm:w-1/2 p-4 card">
+                    <div class="flex relative">
+                      <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
+                      <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                        <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
+                        <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lg:w-1/3 sm:w-1/2 p-4 card">
+                    <div class="flex relative">
+                      <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
+                      <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                        <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
+                        <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Repeat other cards -->
+                </div>
+              </div>
+            
+              <style>
+                /* Inline CSS for camera reel and animation */
+                .camera-reel {
+                  display: flex;
+                  overflow: hidden;
+                  animation: slide 20s linear infinite;
+                }
+            
+                .card {
+                  transition: transform 0.3s ease;
+                  position: relative;
+                  animation: trend 1s ease-in-out infinite alternate; /* Trend effect */
+                }
+            
+                .card:hover {
+                  animation: shake 1s infinite;
+                  animation-timing-function: ease-in-out;
+                }
+            
+                @keyframes slide {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-100%);
+                  }
+                }
+            
+                @keyframes trend {
+                  0% {
+                    transform: translateY(0);
+                  }
+                  50% {
+                    transform: translateY(20px);
+                  }
+                  100% {
+                    transform: translateY(-20px);
+                  }
+                }
+            
+                @keyframes shake {
+                  0% {
+                    transform: translateY(0);
+                  }
+                  25% {
+                    transform: translateY(-15px);
+                  }
+                  50% {
+                    transform: translateY(15px);
+                  }
+                  75% {
+                    transform: translateY(-15px);
+                  }
+                  100% {
+                    transform: translateY(15px);
+                  }
+                }
+              </style>
+            
+              <script>
+                // Inline JS for automatic sliding and stopping on hover
+                const cameraReel = document.querySelector('.camera-reel');
+                const cards = document.querySelectorAll('.card');
+            
+                let isHovered = false;
+                let hoveredCard = null;
+            
+                // Pause the slide when the user hovers over any card and stop its animation
+                cards.forEach(card => {
+                  card.addEventListener('mouseenter', () => {
+                    isHovered = true;
+                    hoveredCard = card; // Track which card is hovered
+                    cameraReel.style.animationPlayState = 'paused'; // Stop the entire reel
+                    card.style.animationPlayState = 'paused'; // Stop this card's animation
+                  });
+            
+                  card.addEventListener('mouseleave', () => {
+                    isHovered = false;
+                    hoveredCard = null;
+                    cameraReel.style.animationPlayState = 'running'; // Resume sliding for the entire reel
+                    card.style.animationPlayState = 'running'; // Resume animation for this card
+                  });
+                });
+            
+                // Slide continuously
+                function slide() {
+                  if (!isHovered) {
+                    cameraReel.style.animation = 'slide 20s linear infinite';
+                  }
+                }
+            
+                // Trigger the slide function
+                setInterval(slide, 10);
+              </script>
+            </section>
+            <section class="text-gray-600 body-font" id="heartbeat-section" style="opacity: 0; transition: opacity 0.5s ease-in-out;">
+              <div class="container px-5 py-24 mx-auto">
+                <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
+                    <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                  </svg>
+                  <p class="leading-relaxed text-lg">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware. Man bun next level coloring book skateboard four loko knausgaard. Kitsch keffiyeh master cleanse direct trade indigo juice before they sold out gentrify plaid gastropub normcore XOXO 90's pickled cindigo jean shorts. Slow-carb next level shoindigoitch ethical authentic, yr scenester sriracha forage franzen organic drinking vinegar.</p>
+                  <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+                </div>
+              </div>
+            </section>
+            
+            <script>
+              // Inline CSS for heartbeat animation
+              const style = document.createElement('style');
+              style.innerHTML = `
+                @keyframes heartbeat {
+                  0% {
+                    transform: scale(1);
+                    opacity: 1;
+                  }
+                  25% {
+                    transform: scale(1.1);
+                    opacity: 1.2;
+                  }
+                  50% {
+                    transform: scale(1);
+                    opacity: 1;
+                  }
+                  75% {
+                    transform: scale(1.1);
+                    opacity: 1.2;
+                  }
+                  100% {
+                    transform: scale(1);
+                    opacity: 1;
+                  }
+                }
+            
+                #heartbeat-section.appear {
+                  animation: heartbeat 5.0s ease-in-out infinite;
+                  opacity: 1 !important;
+                }
+              `;
+              document.head.appendChild(style);
+            
+              // JavaScript for handling scroll event with fallback for browsers that do not support IntersectionObserver
+              const heartbeatSection = document.getElementById('heartbeat-section');
+            
+              // Check for IntersectionObserver support
+              if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                      heartbeatSection.classList.add('appear');
+                      heartbeatSection.style.opacity = '1'; // Make it visible when in view
+                    } else {
+                      heartbeatSection.classList.remove('appear');
+                      heartbeatSection.style.opacity = '0'; // Hide when out of view
+                    }
+                  });
+                }, {
+                  threshold: 0.5 // Trigger when 50% of the section is visible
+                });
+            
+                observer.observe(heartbeatSection);
+              } else {
+                // Fallback for browsers that don't support IntersectionObserver
+                window.addEventListener('scroll', () => {
+                  const rect = heartbeatSection.getBoundingClientRect();
+                  if (rect.top <= window.innerHeight * 0.5) {
+                    heartbeatSection.classList.add('appear');
+                    heartbeatSection.style.opacity = '1'; // Make it visible when in view
+                  } else {
+                    heartbeatSection.classList.remove('appear');
+                    heartbeatSection.style.opacity = '0'; // Hide when out of view
+                  }
+                });
+              }
+            </script>
+            
+            <section class="text-gray-600 body-font">
+              <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Pitchfork Kickstarter Taxidermy</h1>
+                  <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p>
+                </div>
+                <div class="flex flex-wrap -m-4">
+                  <div class="xl:w-1/3 md:w-1/2 p-4">
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                      </div>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
+                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                    </div>
+                  </div>
+                  <div class="xl:w-1/3 md:w-1/2 p-4">
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                          <circle cx="6" cy="6" r="3"></circle>
+                          <circle cx="6" cy="18" r="3"></circle>
+                          <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                        </svg>
+                      </div>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">The Catalyzer</h2>
+                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                    </div>
+                  </div>
+                  <div class="xl:w-1/3 md:w-1/2 p-4">
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                      </div>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Neptune</h2>
+                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                    </div>
+                  </div>
+                  <div class="xl:w-1/3 md:w-1/2 p-4">
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                          <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
+                        </svg>
+                      </div>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Melanchole</h2>
+                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                    </div>
+                  </div>
+                  <div class="xl:w-1/3 md:w-1/2 p-4">
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                        </svg>
+                      </div>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Bunker</h2>
+                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                    </div>
+                  </div>
+                  <div class="xl:w-1/3 md:w-1/2 p-4">
+                    <div class="border border-gray-200 p-6 rounded-lg">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                      </div>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Ramona Falls</h2>
+                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Feedback</button>
+              </div>
+            </section>
+
+          
+        <!-- #primary -->
+        <div class="scroll-to-top hoverable"></div>
+      </div>
+      <!-- #content -->
+      <footer class="footer-nexgen">
+        <div class="content has-text-centered">
+          <div id="footer-social" class="col">
+            <a href="https://www.facebook.com/genpt" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/genPT" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/company-beta/3527447/" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+          <div id="footer-navigation" class="col">
+            <div class="menu-footer-menu-pt-container">
+              <ul id="footer-menu" class="menu">
+                <li id="menu-item-338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-338">
+                  <a target="_blank" href="https://suporte.nexgen.pt">Suporte</a>
+                </li>
+                <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333">
+                  <a href="/perguntas-e-respostas/">FAQs</a>
+                </li>
+                <li id="menu-item-335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-335">
+                  <a href="/blog/">Blog</a>
+                </li>
+                <li id="menu-item-2110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2110">
+                  <a href="/newsletter/">Newsletter</a>
+                </li>
+                <li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-336">
+                  <a href="/contactos/">Contactos</a>
+                </li>
+                <li id="menu-item-334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334">
+                  <a href="/termos-e-condicoes/">Termos &#038; Condições</a>
+                </li>
+                <li id="menu-item-337" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-337">
+                  <a rel="privacy-policy" href="/politica-de-privacidade/">Política de Privacidade</a>
+                </li>
+                <li id="menu-item-2220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2220">
+                  <a target="_blank" href="https://www.livroreclamacoes.pt/inicio">Livro de Reclamações</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-flags">
+            <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-touch-device wpml-ls-legacy-list-horizontal">
+              <ul>
+                <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
+                  <!-- <a href="/en/about-us/" class="wpml-ls-link">
+                    <img class="wpml-ls-flag" src="/wp-content/uploads/2020/04/logo.png" alt="Inglês" width=1000 height=30 />
+                  </a> -->
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p> NexGen &copy; 2025 - <a href="tel:00351218640637">+351 218 640 637</a> - <a href="mailto:geral@nexgen.pt">geral@nexgen.pt</a>
+            <br>
+            <small>(Department Of Computer Science & Application , Gour Mahavidyalaya)</small>
+          </p>
+        </div>
+      </footer>
+      
+      <!-- #colophon -->
+    </div>
+    <!-- #page -->
+    <span class="ht_ctc_chat_data" data-no_number="" data-settings="{&quot;number&quot;:&quot;351917906156&quot;,&quot;pre_filled&quot;:&quot;Ol\u00e1, visitei o site da nexgen, estava na p\u00e1gina &amp;quot;Quem Somos&amp;quot; e gostaria de falar um pouco. Pode ajudar-me?&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;display: none; cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 40px; left: 40px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 150px; right: 10px;&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:&quot;no-show-effects&quot;,&quot;ani&quot;:&quot;no-animations&quot;,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}"></span>
+    <link rel='stylesheet' id='quiz-maker-admin-css' href='admin.css' type='text/css' media='all' />
+    <script type="text/javascript" src="vendor.min.js" id="nexgen-vendor-js"></script>
+    <!-- Dot Liner -->
+    <script type="text/javascript" id="nexgen-main-js-extra">
+      /* 
+				<![CDATA[ */
+      var nexgen_main = {
+        "page": "nex",
+        "is_404": ""
+      };
+      
+      /* ]]> */
+    </script>
+    <script type="text/javascript" src="main.fixed.js" id="nexgen-main-js"></script>
+ 
+
+  </body>
+  
+</html>
