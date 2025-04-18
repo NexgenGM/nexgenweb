@@ -124,6 +124,11 @@
   position: absolute;
   top: 0; left: 0;
   z-index: -1;
+	      #particles-js,
+canvas#noise,
+.cursor {
+  pointer-events: none !important;
+}
 }
 
 
@@ -158,42 +163,57 @@
         particlesJS("particles-js", {
           particles: {
             number: {
-              value: 90,
-              density: { enable: true, value_area: 800 }
+              value: 100,
+              density: {
+                enable: true,
+                value_area: 1000
+              }
             },
             color: {
-              value: ["#ff8080", "#80ff80", "#8080ff"] // pastel red, green, blue
+              value: ["#00ffff", "#ff00ff", "#00ff88", "#ff8800"] // neon cyan, magenta, green, orange
             },
             shape: {
-              type: "circle"
+              type: "circle",
+              stroke: {
+                width: 0,
+                color: "#000000"
+              }
             },
             opacity: {
-              value: 0.7
-            },
-            size: {
-              value: 3,
+              value: 0.9,
               random: true,
               anim: {
                 enable: true,
-                speed: 3,
-                size_min: 0.3,
+                speed: 1,
+                opacity_min: 0.4,
+                sync: false
+              }
+            },
+            size: {
+              value: 4,
+              random: true,
+              anim: {
+                enable: true,
+                speed: 5,
+                size_min: 0.5,
                 sync: false
               }
             },
             line_linked: {
               enable: true,
-              distance: 150,
-              color: "#8888ff", // choose a nice blend or your favorite color
-              opacity: 0.6,
-              width: 1.2
+              distance: 140,
+              color: "#00ffff",
+              opacity: 0.4,
+              width: 1
             },
             move: {
               enable: true,
-              speed: 4,
+              speed: 3,
               direction: "none",
-              random: false,
+              random: true,
               straight: false,
-              out_mode: "out"
+              out_mode: "out",
+              bounce: false
             }
           },
           interactivity: {
@@ -203,21 +223,30 @@
                 enable: true,
                 mode: "grab"
               },
-              onclick: { enable: false },
+              onclick: {
+                enable: true,
+                mode: "repulse"
+              },
               resize: true
             },
             modes: {
               grab: {
                 distance: 200,
                 line_linked: {
-                  opacity: 1
+                  opacity: 0.9
                 }
+              },
+              repulse: {
+                distance: 150,
+                duration: 0.4
               }
             }
           },
           retina_detect: true
         });
       </script>
+      
+      
       
 
       
