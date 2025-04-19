@@ -80,8 +80,8 @@ function _createClass(t, e, i) {
 }
 if (jQuery(document).ready(function(t) {
         if (setTimeout(function() {
-                initNoise(), t("#noise").fadeIn("slow"), is_msie() ? (console.log("Por Favor, saia dos anos 90! Não use o Internet Explorer para ver o nosso site brutalíssimo, seja inteligente e utilize algo mais moderno."), t(".symbol-maidot").addClass("msie"), t("#content-alternative").fadeIn()) : t(".content").addClass("loaded")
-            }, 200), true) {
+                initNoise(), t("#noise").fadeIn("slow"), is_msie() ? (console.log("Por Favor, saia dos anos 90! Não use o Internet Explorer para ver o nosso site brutalíssimo, seja inteligente e utilize algo mais moderno."), t(".symbol-nexgen").addClass("msie"), t("#content-alternative").fadeIn()) : t(".content").addClass("loaded")
+            }, 200), "event" != nexgen_main.page) {
             var e;
             for (e = 0; e <= 3; e++)
                 if (document.getElementsByTagName("H" + e)) {
@@ -126,13 +126,13 @@ if (jQuery(document).ready(function(t) {
                 scrollTop: 0
             }, 400), !1
         })
-    }), 1 == maidot_main.is_404 && function(s) {
+    }), 1 == nexgen_main.is_404 && function(s) {
         var n, r, o, a;
         document.addEventListener("DOMContentLoaded", function() {
             s.devicePixelRatio || 1, n = document.getElementById("canvas"), r = n.getContext("2d"), o = new t,
                 function(t) {
                     var e = new XMLHttpRequest;
-                    e.onload = t, e.open("GET", "wp-content/themes/maidot/404_madness.js", !0), e.send(null)
+                    e.onload = t, e.open("GET", "wp-content/themes/nexgen/404_madness.js", !0), e.send(null)
                 }(function(t) {
                     s.addEventListener("resize", c, !1), i(), u(t), s.requestAnimationFrame(d)
                 })
@@ -310,7 +310,7 @@ if (jQuery(document).ready(function(t) {
         function f(t, e) {
             return Math.random() * (e - t) + t
         }
-    }(window), jQuery(function() {
+    }(window), "/" == nexgen_main.page || is_mobile() || jQuery(function() {
         var e, n = document.querySelector(".part"),
             u = n.getContext("2d");
         n.width = window.innerWidth, n.height = window.innerHeight, u.lineWidth = .3, u.strokeStyle = new s(150).style;
@@ -393,8 +393,8 @@ if (jQuery(document).ready(function(t) {
                 })
             }, 200)
         })
-    }), false || false) {
-    ;
+    }), "event" == nexgen_main.page || "nexgenevent" == nexgen_main.page) {
+    console.log(nexgen_main.page), console.log(nexgen_main.is_404);
     var winsize, slideshow, startTouch = function(t) {
             initialX = t.touches[0].clientX
         },
@@ -882,9 +882,9 @@ if (jQuery(document).ready(function(t) {
         background: !0
     }, function() {
         return document.body.classList.remove("loading")
-    }), jQuery("#prev-button-portfolio").click(function() {
+    }), jQuery("#prev-button-event").click(function() {
         slideshow.navigate("prev")
-    }), jQuery("#next-button-portfolio").click(function() {
+    }), jQuery("#next-button-event").click(function() {
         slideshow.navigate("next")
     }), document.addEventListener("keydown", function(t) {
         37 == t.keyCode ? slideshow.navigate("left") : 39 == t.keyCode && slideshow.navigate("next")
