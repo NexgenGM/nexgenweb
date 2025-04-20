@@ -9,14 +9,15 @@
       img:is([sizes="auto"i], [sizes^="auto,"i]) {
         contain-intrinsic-size: 3000px 1500px
       }
-      
+
       /* Fix for horizontal scrolling on mobile */
-      html, body {
+      html,
+      body {
         overflow-x: hidden;
         width: 100%;
         position: relative;
       }
-      
+
       /* Center elements on mobile */
       @media (max-width: 768px) {
         .container {
@@ -26,21 +27,24 @@
           width: 100% !important;
           max-width: 100% !important;
         }
-        
-        .section, .columns, .column {
+
+        .section,
+        .columns,
+        .column {
           padding: 0.5rem !important;
           display: flex;
           flex-direction: column;
           align-items: center;
           text-align: center;
         }
-        
+
         iframe {
           width: 100% !important;
           height: 300px !important;
         }
-        
-        .xl\:w-1\/3, .md\:w-1\/2 {
+
+        .xl\:w-1\/3,
+        .md\:w-1\/2 {
           width: 100% !important;
           margin-left: auto;
           margin-right: auto;
@@ -49,16 +53,15 @@
     </style>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>NexGen</title>
-
     <script>
       document.onkeydown = function(e) {
-          // Disable F12, Ctrl + Shift + I
-          if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
-              e.preventDefault();
-              alert("You cannot access developer tools!");
-          }
+        // Disable F12, Ctrl + Shift + I
+        if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
+          e.preventDefault();
+          alert("You cannot access developer tools!");
+        }
       };
-  </script>
+    </script>
     <style id='wp-emoji-styles-inline-css' type='text/css'>
       img.wp-smiley,
       img.emoji {
@@ -72,10 +75,10 @@
         background: none !important;
         padding: 0 !important;
       }
+
       #translator-popup {
         display: none !important;
-    }
-    
+      }
     </style>
     <style id='classic-theme-styles-inline-css' type='text/css'>
       /*! This file is auto-generated */
@@ -95,9 +98,7 @@
         text-decoration: none
       }
     </style>
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
     <link rel='stylesheet' id='nexgen-style-css' href='style.css' type='text/css' media='all' />
     <style id='akismet-widget-style-inline-css' type='text/css'>
       .a-stats {
@@ -156,43 +157,27 @@
         white-space: nowrap;
       }
     </style>
-    
-    <link rel="icon" href="/wp-content/uploads/2020/04/logo.png" sizes="32x32" />
-    <link rel="icon" href="/wp-content/uploads/2020/04/logo.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="/wp-content/uploads/2020/04/logo.png" />
-    <meta name="msapplication-TileImage" content="/wp-content/uploads/2020/04/logo.png" />
-
+    <link rel="icon" href="/img/logo.png" sizes="32x32" />
+    <link rel="icon" href="/img/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/img/logo.png" />
+    <meta name="msapplication-TileImage" content="/img/logo.png" />
   </head>
   <body class="">
     <div class="cursor">
-      <div class="cursor__ball cursor__ball--big ">
-        <svg height="35" width="30">
+      <div class="cursor__ball cursor__ball--big "><svg height="35" width="30">
           <circle cx="15" cy="20" r="12" stroke-width="0"></circle>
-        </svg>
-      </div>
-      <div class="cursor__ball cursor__ball--small">
-        <svg height="10" width="10">
+        </svg></div>
+      <div class="cursor__ball cursor__ball--small"><svg height="10" width="10">
           <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
-        </svg>
-      </div>
-    </div>
-    <canvas id="noise" class="noise"></canvas>
+        </svg></div>
+    </div><canvas id="noise" class="noise"></canvas>
     <div class="nav-inside">
-
       <div class="nav__content">
         <ul class="nav__list">
-          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
-            <a href="index.html">Home</a>
-          </li>
-          <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-66 current_page_item menu-item-68">
-            <a href="event.html" >Event</a>
-          </li>
-          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
-            <a href="gallery.html">Gallery</a>
-          </li>
-          <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
-            <a href="about.html">About</a>
-          </li>
+          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="index.html">Home</a></li>
+          <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-66 current_page_item menu-item-68"><a href="event.html">Event</a></li>
+          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="gallery.html">Gallery</a></li>
+          <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="about.html">About</a></li>
         </ul>
       </div>
     </div>
@@ -201,11 +186,7 @@
         <div class="column is-mobile is-vcentered">
           <div class="columns is-mobile is-vcentered">
             <div id="logo-nexgen" class="column">
-              <div class="logo-nexgen">
-                <a href="index.html" rel="home">
-                  <img src="/NexGen/img/logo.png" alt="nexgen" class="logo hoverable" />
-                </a>
-              </div>
+              <div class="logo-nexgen"><a href="index.html" rel="home"><img src="img/logo.png" alt="nexgen" class="logo hoverable" /></a></div>
             </div>
             <!-- .site-branding -->
             <div class="column is-narrow">
@@ -222,21 +203,11 @@
         </div>
         <!-- #site-navigation -->
       </header>
-      <!-- #masthead -->
-      <div id="content" class="content div-top-middle">
-        <div id="loader-wrapper">
-          <div id="loader">
+      <!-- #masthead --><div id="content" class="content div-top-middle"><div id="loader-wrapper"><div id="loader">
             <div class="symbol-nexgen">
-              <img id="loading" src="/NexGen/img/logo.png" alt="nexgen logo" class="logo" />
+              <img id="loading" src="/img/logo.png" alt="nexgen logo" class="logo" />
             </div>
-          </div>
-          <div class="loader-section section-left"></div>
-          <div class="loader-section section-right"></div>
-        </div>
-        <canvas class="part"></canvas>
-        <div class="mouse"></div>
-        <div id="primary" class="section">
-          <main id="main" class="container is-marginless is-fluid">
+          </div><div class="loader-section section-left"></div><div class="loader-section section-right"></div></div><canvas class="part"></canvas><div class="mouse"></div><div id="primary" class="section"><main id="main" class="container is-marginless is-fluid">
             <div class="shadow-title parallax-top-shadow">NEXGEN</div>
             <div class="section full-height">
               <div class="section-title-wrap">
@@ -250,358 +221,370 @@
                 </div>
               </div>
             </div>
-
-          <section class="text-gray-600 body-font">
-            <div class="container px-5 py-24 mx-auto">
-              <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">What is NexGen ?</h1>
-                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
-                  The NexGen, the Premier Celebration of Creativity and Innovation in Computer Science and Application !! 
-                  <br>
-                  Join us for an exhilarating showcase of talent, where competitions in singing, dancing, drawing, coding, and more come together in a celebration of both technology and the arts. Whether you're a tech enthusiast, an aspiring artist, or a music lover, NexGen offers something for everyone.
-                  <br>
-                  Connect with us to witness the remarkable skills of our participants, enjoy highlights from the event, and be inspired by the powerful fusion of technology and creativity.
-                  <br>
-                  "Let's code, create, and celebrate together!"
-                </p>
-              </div>
-          </section>
-
-          <!-- Members Section -->
-          <section class="text-gray-600 body-font">
-            <div class="container px-5 py-24 mx-auto">
-              <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Meet Our Team</h1>
-                <!-- <p class="lg:w-1/2 w-full leading-relaxed text-gray-500"></p> -->
-              </div>
-
-              <div class="flex flex-wrap -mx-4 justify-center">
-                <!-- Card 1 -->
-                <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
-                  <div class="border border-gray-200 p-6 rounded-lg w-full max-w-sm mx-auto transform transition duration-500 hover:scale-105 hover:shadow-lg text-center">
-                    <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 mx-auto">
-                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                      </svg>
-                    </div>
-                    <p class="leading-relaxed text-base text-indigo-500 font-medium text-center">President</p>
-                    <h2 class="text-lg text-gray-900 font-medium title-font mb-2 member-name text-center mx-auto">
-                      <a href="https://linkedin.com/in/sanjay-mandal" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
-                    </h2>
-                    <p class="leading-relaxed text-sm text-gray-600 text-center">
-                      <a href="tel:+919876543210" class="hover:text-indigo-500 transition-colors duration-300">+91 98765 43210</a>
-                    </p>
-                  </div>
+            <section class="text-gray-600 body-font">
+              <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">What is NexGen ?</h1>
+                  <p class="lg:w-1/2 w-full leading-relaxed text-gray-500"> The NexGen, the Premier Celebration of Creativity and Innovation in Computer Science and Application !! <br> Join us for an exhilarating showcase of talent, where competitions in singing, dancing, drawing, coding, and more come together in a celebration of both technology and the arts. Whether you're a tech enthusiast, an aspiring artist, or a music lover, NexGen offers something for everyone. <br> Connect with us to witness the remarkable skills of our participants, enjoy highlights from the event, and be inspired by the powerful fusion of technology and creativity. <br> "Let's code, create, and celebrate together!" </p>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
-                  <div class="border border-gray-200 p-6 rounded-lg w-full max-w-sm mx-auto transform transition duration-500 hover:scale-105 hover:shadow-lg text-center">
-                    <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 mx-auto">
-                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                      </svg>
-                    </div>
-                    <p class="leading-relaxed text-base text-indigo-500 font-medium text-center">Secretary</p>
-                    <h2 class="text-lg text-gray-900 font-medium title-font mb-2 member-name text-center mx-auto">
-                      <a href="https://linkedin.com/in/sanjay-mandal" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
-                    </h2>
-                    <p class="leading-relaxed text-sm text-gray-600 text-center">
-                      <a href="tel:+919876543210" class="hover:text-indigo-500 transition-colors duration-300">+91 98765 43210</a>
-                    </p>
-                  </div>
+            </section>
+            <!-- Members Section -->
+            <section class="text-gray-600 body-font">
+              <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Meet Our Team</h1>
+                  <!-- <p class="lg:w-1/2 w-full leading-relaxed text-gray-500"></p> -->
                 </div>
-
-                <!-- Card 3 -->
-                <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
-                  <div class="border border-gray-200 p-6 rounded-lg w-full max-w-sm mx-auto transform transition duration-500 hover:scale-105 hover:shadow-lg text-center">
-                    <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 mx-auto">
-                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                      </svg>
-                    </div>
-                    <p class="leading-relaxed text-base text-indigo-500 font-medium text-center">Event Co.</p>
-                    <h2 class="text-lg text-gray-900 font-medium title-font mb-2 member-name text-center mx-auto">
-                      <a href="https://linkedin.com/in/sanjay-mandal" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
-                    </h2>
-                    <p class="leading-relaxed text-sm text-gray-600 text-center">
-                      <a href="tel:+919876543210" class="hover:text-indigo-500 transition-colors duration-300">+91 98765 43210</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Clubs Section -->
-          <section class="text-gray-600 body-font">
-            <style>
-              /* Custom styles for club cards */
-              @media (max-width: 768px) {
-                .club-card {
-                  margin-bottom: 2rem;
-                  width: 95% !important;
-                  max-width: 95% !important;
-                  margin-left: auto !important;
-                  margin-right: auto !important;
-                }
-                .member-list {
-                  font-size: 0.9rem;
-                }
-                .separator {
-                  margin: 1rem auto;
-                }
-                
-                /* Increase width and reduce margins for mobile */
-                .container {
-                  padding-left: 10px !important;
-                  padding-right: 10px !important;
-                }
-                
-                .w-full.lg\:w-1\/3.md\:w-1\/2.px-4,
-                .xl\:w-1\/3.md\:w-1\/2.w-full.p-4 {
-                  padding-left: 0.5rem !important;
-                  padding-right: 0.5rem !important;
-                  width: 100% !important;
-                }
-                
-                .w-full.max-w-sm.mx-auto {
-                  max-width: 100% !important;
-                }
-                
-                .p-6 {
-                  padding: 1rem !important;
-                }
-              }
-              
-              /* Even smaller screens */
-              @media (max-width: 480px) {
-                .container {
-                  padding-left: 5px !important;
-                  padding-right: 5px !important;
-                }
-                
-                .club-card, 
-                .border.border-gray-200.p-6.rounded-lg.w-full.max-w-sm.mx-auto {
-                  width: 100% !important;
-                }
-              }
-            </style>
-            
-            <div class="container px-5 py-24 mx-auto">
-              <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Clubs</h1>
-              </div>
-              
-              <div class="flex flex-wrap -mx-4">
-                <!-- Club 1 -->
-                <div class="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
-                  <div class="club-card border border-gray-200 rounded-lg overflow-hidden shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
-                    <div class="p-6">
-                      <h2 class="text-xl text-center font-semibold text-indigo-600 mb-4">Club name</h2>
-                      
-                      <div class="mb-4">
-                        <p class="text-lg text-gray-800"><span class="font-medium">President:</span> <a href="https://www.instagram.com/username1/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a></p>
-                        <p class="text-lg text-gray-800"><span class="font-medium">Secretary:</span> <a href="https://www.instagram.com/username2/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a></p>
-                        <p class="text-lg text-gray-800"><span class="font-medium">Event Co.:</span> <a href="https://www.instagram.com/username3/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a></p>
+                <div class="flex flex-wrap -mx-4 justify-center">
+                  <!-- Card 1 -->
+                  <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
+                    <div class="border border-gray-200 p-6 rounded-lg w-full max-w-sm mx-auto transform transition duration-500 hover:scale-105 hover:shadow-lg text-center">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 mx-auto">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
                       </div>
-                      
-                      <hr class="separator border-gray-300 my-4 w-3/4 mx-auto"/>
-                      
-                      <h3 class="text-center font-medium text-gray-700 mb-3">Members</h3>
-                      <ul class="member-list space-y-2 text-center">
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                      </ul>
+                      <p class="leading-relaxed text-base text-indigo-500 font-medium text-center">President</p>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2 member-name text-center mx-auto">
+                        <a href="https://linkedin.com/in/sanjay-mandal" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                      </h2>
+                      <p class="leading-relaxed text-sm text-gray-600 text-center">
+                        <a href="tel:+919876543210" class="hover:text-indigo-500 transition-colors duration-300">+91 98765 43210</a>
+                      </p>
                     </div>
                   </div>
-                </div>
-                
-                <!-- Club 2 -->
-                <div class="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
-                  <div class="club-card border border-gray-200 rounded-lg overflow-hidden shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
-                    <div class="p-6">
-                      <h2 class="text-xl text-center font-semibold text-indigo-600 mb-4">Club name</h2>
-                      
-                      <div class="mb-4">
-                        <p class="text-lg text-gray-800"><span class="font-medium">President:</span> <a href="https://www.instagram.com/username4/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a></p>
-                        <p class="text-lg text-gray-800"><span class="font-medium">Secretary:</span> <a href="https://www.instagram.com/username5/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a></p>
-                        <p class="text-lg text-gray-800"><span class="font-medium">Event Co.:</span> <a href="https://www.instagram.com/username6/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a></p>
+                  <!-- Card 2 -->
+                  <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
+                    <div class="border border-gray-200 p-6 rounded-lg w-full max-w-sm mx-auto transform transition duration-500 hover:scale-105 hover:shadow-lg text-center">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 mx-auto">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
                       </div>
-                      
-                      <hr class="separator border-gray-300 my-4 w-3/4 mx-auto"/>
-                      
-                      <h3 class="text-center font-medium text-gray-700 mb-3">Members</h3>
-                      <ul class="member-list space-y-2 text-center">
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                      </ul>
+                      <p class="leading-relaxed text-base text-indigo-500 font-medium text-center">Secretary</p>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2 member-name text-center mx-auto">
+                        <a href="https://linkedin.com/in/sanjay-mandal" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                      </h2>
+                      <p class="leading-relaxed text-sm text-gray-600 text-center">
+                        <a href="tel:+919876543210" class="hover:text-indigo-500 transition-colors duration-300">+91 98765 43210</a>
+                      </p>
                     </div>
                   </div>
-                </div>
-                
-                <!-- Club 3 -->
-                <div class="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
-                  <div class="club-card border border-gray-200 rounded-lg overflow-hidden shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
-                    <div class="p-6">
-                      <h2 class="text-xl text-center font-semibold text-indigo-600 mb-4">Club name</h2>
-                      
-                      <div class="mb-4">
-                        <p class="text-lg text-gray-800"><span class="font-medium">President:</span> <a href="https://www.instagram.com/username7/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a></p>
-                        <p class="text-lg text-gray-800"><span class="font-medium">Secretary:</span> <a href="https://www.instagram.com/username8/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a></p>
-                        <p class="text-lg text-gray-800"><span class="font-medium">Event Co.:</span> <a href="https://www.instagram.com/username9/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a></p>
+                  <!-- Card 3 -->
+                  <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
+                    <div class="border border-gray-200 p-6 rounded-lg w-full max-w-sm mx-auto transform transition duration-500 hover:scale-105 hover:shadow-lg text-center">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 mx-auto">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
                       </div>
-                      
-                      <hr class="separator border-gray-300 my-4 w-3/4 mx-auto"/>
-                      
-                      <h3 class="text-center font-medium text-gray-700 mb-3">Members</h3>
-                      <ul class="member-list space-y-2 text-center">
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a></li>
-                      </ul>
+                      <p class="leading-relaxed text-base text-indigo-500 font-medium text-center">Event Co.</p>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2 member-name text-center mx-auto">
+                        <a href="https://linkedin.com/in/sanjay-mandal" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                      </h2>
+                      <p class="leading-relaxed text-sm text-gray-600 text-center">
+                        <a href="tel:+919876543210" class="hover:text-indigo-500 transition-colors duration-300">+91 98765 43210</a>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            
-            <script>
-              // Add responsive behavior for club cards
-              document.addEventListener('DOMContentLoaded', function() {
-                // Function to adjust card heights to be equal in desktop view
-                function equalizeCardHeights() {
-                  if (window.innerWidth >= 768) {
-                    const clubCards = document.querySelectorAll('.club-card');
-                    let maxHeight = 0;
-                    
-                    // Reset heights
-                    clubCards.forEach(card => {
-                      card.style.height = 'auto';
-                      const height = card.offsetHeight;
-                      maxHeight = height > maxHeight ? height : maxHeight;
-                    });
-                    
-                    // Set all cards to max height
-                    clubCards.forEach(card => {
-                      card.style.height = maxHeight + 'px';
-                    });
-                  } else {
-                    // In mobile view, let cards have natural height
-                    const clubCards = document.querySelectorAll('.club-card');
-                    clubCards.forEach(card => {
-                      card.style.height = 'auto';
-                    });
+            </section>
+            <!-- Clubs Section -->
+            <section class="text-gray-600 body-font">
+              <style>
+                /* Custom styles for club cards */
+                @media (max-width: 768px) {
+                  .club-card {
+                    margin-bottom: 2rem;
+                    width: 95% !important;
+                    max-width: 95% !important;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                  }
+
+                  .member-list {
+                    font-size: 0.9rem;
+                  }
+
+                  .separator {
+                    margin: 1rem auto;
+                  }
+
+                  /* Increase width and reduce margins for mobile */
+                  .container {
+                    padding-left: 10px !important;
+                    padding-right: 10px !important;
+                  }
+
+                  .w-full.lg\:w-1\/3.md\:w-1\/2.px-4,
+                  .xl\:w-1\/3.md\:w-1\/2.w-full.p-4 {
+                    padding-left: 0.5rem !important;
+                    padding-right: 0.5rem !important;
+                    width: 100% !important;
+                  }
+
+                  .w-full.max-w-sm.mx-auto {
+                    max-width: 100% !important;
+                  }
+
+                  .p-6 {
+                    padding: 1rem !important;
                   }
                 }
-                
-                // Run on load and resize
-                equalizeCardHeights();
-                window.addEventListener('resize', equalizeCardHeights);
-              });
-            </script>
-          </section>
-          
-          <!-- Feedback Button Section -->
-          <section class="text-gray-600 body-font">
-            <div class="container px-5 py-12 mx-auto">
-              <div class="flex flex-col items-center justify-center">
-                <h2 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-center">We Value Your Feedback</h2>
-                <p class="text-base leading-relaxed text-center mb-6 max-w-lg">Your opinions and suggestions help us improve NexGen. Please take a moment to share your thoughts with us.</p>
-                <a href="https://forms.gle/your-google-form-id" target="_blank" class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                  </svg>
-                  Share Your Feedback
-                </a>
-              </div>
-            </div>
-          </section>
-          
-          <section class="text-gray-600 body-font relative">
-            <style>
-              /* Map styling for web view */
-              @media (min-width: 768px) {
-                .map-container {
-                  max-width: 85%;
-                  margin: 0 auto;
-                }
-                .map-iframe {
-                  height: 550px !important;
-                }
-              }
-            </style>
-            <div class="container px-5 py-24 mx-auto">
-              <div class="w-full bg-gray-300 rounded-lg overflow-hidden p-2 flex items-center justify-center relative map-container">
-                <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6703.5385551310055!2d88.14673491060036!3d25.020781877732386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fafd97cfcc5d2f%3A0xd50ac6ff5878db5f!2sGour%20Mahavidyalaya!5e1!3m2!1sen!2sus!4v1742502724596!5m2!1sen!2sus" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-          </section>
 
-      <!-- #primary -->
-      <div class="scroll-to-top hoverable"></div>
-    </div>
-    <!-- #content -->
-    <footer class="footer-nexgen">
-      <div class="content has-text-centered">
-        <div id="footer-social" class="col">
-          <a href="https://www.facebook.com/people/NexGen/61558566181617/" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/nexgen_gm/" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <!-- Website Hyperlink Icon -->
-          <a href="https://sites.google.com/view/nexgengm/" target="_blank">
-            <i class="fas fa-link"></i>
-          </a>
+                /* Even smaller screens */
+                @media (max-width: 480px) {
+                  .container {
+                    padding-left: 5px !important;
+                    padding-right: 5px !important;
+                  }
+
+                  .club-card,
+                  .border.border-gray-200.p-6.rounded-lg.w-full.max-w-sm.mx-auto {
+                    width: 100% !important;
+                  }
+                }
+              </style>
+              <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Clubs</h1>
+                </div>
+                <div class="flex flex-wrap -mx-4">
+                  <!-- Club 1 -->
+                  <div class="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
+                    <div class="club-card border border-gray-200 rounded-lg overflow-hidden shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                      <div class="p-6">
+                        <h2 class="text-xl text-center font-semibold text-indigo-600 mb-4">Club name</h2>
+                        <div class="mb-4">
+                          <p class="text-lg text-gray-800">
+                            <span class="font-medium">President:</span>
+                            <a href="https://www.instagram.com/username1/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                          </p>
+                          <p class="text-lg text-gray-800">
+                            <span class="font-medium">Secretary:</span>
+                            <a href="https://www.instagram.com/username2/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                          </p>
+                          <p class="text-lg text-gray-800">
+                            <span class="font-medium">Event Co.:</span>
+                            <a href="https://www.instagram.com/username3/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                          </p>
+                        </div>
+                        <hr class="separator border-gray-300 my-4 w-3/4 mx-auto" />
+                        <h3 class="text-center font-medium text-gray-700 mb-3">Members</h3>
+                        <ul class="member-list space-y-2 text-center">
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Club 2 -->
+                  <div class="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
+                    <div class="club-card border border-gray-200 rounded-lg overflow-hidden shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                      <div class="p-6">
+                        <h2 class="text-xl text-center font-semibold text-indigo-600 mb-4">Club name</h2>
+                        <div class="mb-4">
+                          <p class="text-lg text-gray-800">
+                            <span class="font-medium">President:</span>
+                            <a href="https://www.instagram.com/username4/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                          </p>
+                          <p class="text-lg text-gray-800">
+                            <span class="font-medium">Secretary:</span>
+                            <a href="https://www.instagram.com/username5/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                          </p>
+                          <p class="text-lg text-gray-800">
+                            <span class="font-medium">Event Co.:</span>
+                            <a href="https://www.instagram.com/username6/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                          </p>
+                        </div>
+                        <hr class="separator border-gray-300 my-4 w-3/4 mx-auto" />
+                        <h3 class="text-center font-medium text-gray-700 mb-3">Members</h3>
+                        <ul class="member-list space-y-2 text-center">
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Club 3 -->
+                  <div class="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
+                    <div class="club-card border border-gray-200 rounded-lg overflow-hidden shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                      <div class="p-6">
+                        <h2 class="text-xl text-center font-semibold text-indigo-600 mb-4">Club name</h2>
+                        <div class="mb-4">
+                          <p class="text-lg text-gray-800">
+                            <span class="font-medium">President:</span>
+                            <a href="https://www.instagram.com/username7/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                          </p>
+                          <p class="text-lg text-gray-800">
+                            <span class="font-medium">Secretary:</span>
+                            <a href="https://www.instagram.com/username8/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                          </p>
+                          <p class="text-lg text-gray-800">
+                            <span class="font-medium">Event Co.:</span>
+                            <a href="https://www.instagram.com/username9/" target="_blank" class="hover:text-indigo-500 transition-colors duration-300">Name</a>
+                          </p>
+                        </div>
+                        <hr class="separator border-gray-300 my-4 w-3/4 mx-auto" />
+                        <h3 class="text-center font-medium text-gray-700 mb-3">Members</h3>
+                        <ul class="member-list space-y-2 text-center">
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-gray-600 hover:text-indigo-500">Member name</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                // Add responsive behavior for club cards
+                document.addEventListener('DOMContentLoaded', function() {
+                  // Function to adjust card heights to be equal in desktop view
+                  function equalizeCardHeights() {
+                    if (window.innerWidth >= 768) {
+                      const clubCards = document.querySelectorAll('.club-card');
+                      let maxHeight = 0;
+                      // Reset heights
+                      clubCards.forEach(card => {
+                        card.style.height = 'auto';
+                        const height = card.offsetHeight;
+                        maxHeight = height > maxHeight ? height : maxHeight;
+                      });
+                      // Set all cards to max height
+                      clubCards.forEach(card => {
+                        card.style.height = maxHeight + 'px';
+                      });
+                    } else {
+                      // In mobile view, let cards have natural height
+                      const clubCards = document.querySelectorAll('.club-card');
+                      clubCards.forEach(card => {
+                        card.style.height = 'auto';
+                      });
+                    }
+                  }
+                  // Run on load and resize
+                  equalizeCardHeights();
+                  window.addEventListener('resize', equalizeCardHeights);
+                });
+              </script>
+            </section>
+            <!-- Feedback Button Section -->
+            <section class="text-gray-600 body-font">
+              <div class="container px-5 py-12 mx-auto">
+                <div class="flex flex-col items-center justify-center">
+                  <h2 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-center">We Value Your Feedback</h2>
+                  <p class="text-base leading-relaxed text-center mb-6 max-w-lg">Your opinions and suggestions help us improve NexGen. Please take a moment to share your thoughts with us.</p>
+                  <a href="https://forms.gle/mZLCYyGpCHRpMgMz8" target="_blank" class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg> Share Your Feedback </a>
+                </div>
+              </div>
+            </section>
+            <section class="text-gray-600 body-font relative">
+              <style>
+                /* Map styling for web view */
+                @media (min-width: 768px) {
+                  .map-container {
+                    max-width: 85%;
+                    margin: 0 auto;
+                  }
+
+                  .map-iframe {
+                    height: 550px !important;
+                  }
+                }
+              </style>
+              <div class="container px-5 py-24 mx-auto">
+                <div class="w-full bg-gray-300 rounded-lg overflow-hidden p-2 flex items-center justify-center relative map-container">
+                  <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6703.5385551310055!2d88.14673491060036!3d25.020781877732386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fafd97cfcc5d2f%3A0xd50ac6ff5878db5f!2sGour%20Mahavidyalaya!5e1!3m2!1sen!2sus!4v1742502724596!5m2!1sen!2sus" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </section>
+            <!-- #primary -->
+            <div class="scroll-to-top hoverable"></div>
         </div>
-
-        <!-- <div class="footer-flags">
-          <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-touch-device wpml-ls-legacy-list-horizontal">
-            <ul>
-              <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
-                <a href="/en/about-us/" class="wpml-ls-link">
-                  <img class="wpml-ls-flag" src="/wp-content/uploads/2020/04/logo.png" alt="Inglês" width=1000 height=30 />
-                </a>
-              </li>
-            </ul>
+        <!-- #content -->
+        <footer class="footer-nexgen">
+          <div class="content has-text-centered">
+            <div id="footer-social" class="col">
+              <a href="https://www.facebook.com/people/NexGen/61558566181617/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/nexgen_gm/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <!-- Website Hyperlink Icon -->
+              <a href="https://sites.google.com/view/nexgengm/" target="_blank">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+            <!-- <div class="footer-flags"><div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-touch-device wpml-ls-legacy-list-horizontal"><ul><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-list-horizontal"><a href="/en/about-us/" class="wpml-ls-link"><img class="wpml-ls-flag" src="/img/logo.png" alt="Inglês" width=1000 height=30 /></a></li></ul></div></div> -->
+            <p> NexGen &copy; 2025 - <a href="mailto:itsgmdcsa@gmail.com">itsgmdcsa@gmail.com</a>
+              <br>
+              <small>(Department Of Computer Science & Application , Gour Mahavidyalaya)</small>
+            </p>
           </div>
-        </div> -->
-        <p> NexGen &copy; 2025 - <a href="mailto:itsgmdcsa@gmail.com">itsgmdcsa@gmail.com</a>
-          <br>
-          <small>(Department Of Computer Science & Application , Gour Mahavidyalaya)</small>
-        </p>
+        </footer>
+        <!-- #colophon -->
       </div>
-    </footer>
-      
-      <!-- #colophon -->
-    </div>
-    <!-- #page -->
-    <span class="ht_ctc_chat_data" data-no_number="" data-settings="{&quot;number&quot;:&quot;351917906156&quot;,&quot;pre_filled&quot;:&quot;Ol\u00e1, visitei o site da nexgen, estava na p\u00e1gina &amp;quot;Quem Somos&amp;quot; e gostaria de falar um pouco. Pode ajudar-me?&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;display: none; cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 40px; left: 40px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 150px; right: 10px;&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:&quot;no-show-effects&quot;,&quot;ani&quot;:&quot;no-animations&quot;,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}"></span>
-    <script type="text/javascript" src="vendor.min.js" id="nexgen-vendor-js"></script>
-    <!-- Dot Liner -->
-    <script type="text/javascript" id="nexgen-main-js-extra">
-      /* 
+      <!-- #page -->
+      <span class="ht_ctc_chat_data" data-no_number="" data-settings="{&quot;number&quot;:&quot;351917906156&quot;,&quot;pre_filled&quot;:&quot;Ol\u00e1, visitei o site da nexgen, estava na p\u00e1gina &amp;quot;Quem Somos&amp;quot; e gostaria de falar um pouco. Pode ajudar-me?&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;display: none; cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 40px; left: 40px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 150px; right: 10px;&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:&quot;no-show-effects&quot;,&quot;ani&quot;:&quot;no-animations&quot;,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}"></span>
+      <script type="text/javascript" src="vendor.min.js" id="nexgen-vendor-js"></script>
+      <!-- Dot Liner -->
+      <script type="text/javascript" id="nexgen-main-js-extra">
+        /* 
+				
 				<![CDATA[ */
-      var nexgen_main = {
-        "page": "nex",
-        "is_404": ""
-      };
-      
-      /* ]]> */
-    </script>
-    <script type="text/javascript" src="main.fixed.js" id="nexgen-main-js"></script>
+        var nexgen_main = {
+          "page": "nex",
+          "is_404": ""
+        };
+        /* ]]> */
+      </script>
+      <script type="text/javascript" src="main.fixed.js" id="nexgen-main-js"></script>
   </body>
 </html>
