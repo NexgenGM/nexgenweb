@@ -7,8 +7,19 @@
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <style>
+      @font-face {
+        font-family: 'Horndon';
+        src: url('Fonts/HorndonD.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+      
       img:is([sizes="auto"i], [sizes^="auto,"i]) {
         contain-intrinsic-size: 3000px 1500px
+      }
+      
+      h1 {
+        font-family: 'Horndon', sans-serif;
       }
     </style>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
@@ -119,21 +130,18 @@
         white-space: nowrap;
 
       }
-      #particles-js canvas {
-  display: block;
-  position: absolute;
-  top: 0; left: 0;
-  z-index: -1;
-	      
-}
+    #particles-js canvas {
+      display: block;
+      position: absolute;
+      top: 0; left: 0;
+    z-index: -1;    
+    }
 
-#particles-js,
-canvas#noise,
-.cursor {
-  pointer-events: none !important;
-}
-
-
+    #particles-js,
+    canvas#noise,
+  .cursor {
+    pointer-events: none !important;
+  }
 
     </style>
     
@@ -165,57 +173,42 @@ canvas#noise,
         particlesJS("particles-js", {
           particles: {
             number: {
-              value: 100,
-              density: {
-                enable: true,
-                value_area: 1000
-              }
+              value: 90,
+              density: { enable: true, value_area: 800 }
             },
             color: {
-              value: ["#00ffff", "#ff00ff", "#00ff88", "#ff8800"] // neon cyan, magenta, green, orange
+              value: ["#ff8080", "#80ff80", "#8080ff"] // pastel red, green, blue
             },
             shape: {
-              type: "circle",
-              stroke: {
-                width: 0,
-                color: "#000000"
-              }
+              type: "circle"
             },
             opacity: {
-              value: 0.9,
-              random: true,
-              anim: {
-                enable: true,
-                speed: 1,
-                opacity_min: 0.4,
-                sync: false
-              }
+              value: 0.7
             },
             size: {
-              value: 4,
+              value: 3,
               random: true,
               anim: {
                 enable: true,
-                speed: 5,
-                size_min: 0.5,
+                speed: 3,
+                size_min: 0.3,
                 sync: false
               }
             },
             line_linked: {
               enable: true,
-              distance: 140,
-              color: "#00ffff",
-              opacity: 0.4,
-              width: 1
+              distance: 150,
+              color: "#8888ff", // choose a nice blend or your favorite color
+              opacity: 0.6,
+              width: 1.2
             },
             move: {
               enable: true,
-              speed: 3,
+              speed: 4,
               direction: "none",
-              random: true,
+              random: false,
               straight: false,
-              out_mode: "out",
-              bounce: false
+              out_mode: "out"
             }
           },
           interactivity: {
@@ -225,30 +218,21 @@ canvas#noise,
                 enable: true,
                 mode: "grab"
               },
-              onclick: {
-                enable: true,
-                mode: "repulse"
-              },
+              onclick: { enable: false },
               resize: true
             },
             modes: {
               grab: {
                 distance: 200,
                 line_linked: {
-                  opacity: 0.9
+                  opacity: 1
                 }
-              },
-              repulse: {
-                distance: 150,
-                duration: 0.4
               }
             }
           },
           retina_detect: true
         });
       </script>
-      
-      
       
 
       
@@ -262,14 +246,15 @@ canvas#noise,
           <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-66 current_page_item menu-item-68">
             <a href="event.html" >Event</a>
           </li>
-          <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
-            <a href="about.html">About</a>
-          </li>
           <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
             <a href="gallery.html">Gallery</a>
           </li>
+          <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
+            <a href="about.html">About</a>
+          </li>
         </ul>
       </div>
+
     </div>
     <div id="page" class="container is-fluid is-marginless">
       <header id="nexgen-header" class="columns is-fluid is-marginless">
@@ -278,7 +263,7 @@ canvas#noise,
             <div id="logo-nexgen" class="column">
               <div class="logo-nexgen">
                 <a href="index.html" rel="home">
-                  <img src="logo.png" alt="nexgen" class="logo hoverable" />
+                  <img src="/NexGen/img/logo.png" alt="nexgen" class="logo hoverable" />
                 </a>
               </div>
             </div>
@@ -297,17 +282,20 @@ canvas#noise,
         </div>
         <!-- #site-navigation -->
       </header>
+      <!-- Loading -->
       <!-- #masthead -->
       <div id="content" class="content div-top-middle">
         <div id="loader-wrapper">
           <div id="loader">
             <div class="symbol-nexgen">
-              <img id="loading" src="logo.png" alt="nexgen logo" class="logo" />
+              <img id="loading" src="/NexGen/img/logo.png" alt="nexgen logo" class="logo"/>
             </div>
           </div>
           <div class="loader-section section-left"></div>
           <div class="loader-section section-right"></div>
         </div>
+
+
         <canvas class="part"></canvas>
         <div class="mouse"></div>
         <div id="primary" class="section">
@@ -319,146 +307,224 @@ canvas#noise,
                   <div class="columns">
                     <div class="column parallax-fade-top">
                       <div class="sub-heading">Let's Code ,Create & Celebrate Together</div>
-                      <h1>NEXGEN</h1>
+                      <h1 class="nexgen-title">NEXGEN</h1>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <section class="text-gray-600 body-font">
               <div class="container px-5 py-24 mx-auto">
                 <div class="flex flex-col text-center w-full mb-20">
-                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
-                  <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Current Events</h1>
+                  <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Events that are currently open for registration</p>
                 </div>
-                <div class="flex flex-wrap -m-4 camera-reel">
-                  <!-- Cards go here -->
-                  <div class="lg:w-1/3 sm:w-1/2 p-4 card">
-                    <div class="flex relative">
-                      <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
-                      <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                        <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                        <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                
+                <!-- Event Cards Grid -->
+                <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 px-2 md:px-4" id="event-cards-container">
+                  
+                  <!-- Card 1 -->
+                  <div class="event-card bg-white rounded-lg overflow-hidden shadow-md w-full mx-auto border border-gray-200">
+                    <div class="relative h-[960px] md:h-72">
+                      <img src="/NexGen/uploads/Chess Tournament.jpg" alt="Chess Tournament" class="w-full h-full object-contain bg-gray-100 p-2">
+                      <div class="event-overlay absolute inset-0 bg-black bg-opacity-90 text-white p-5 flex flex-col justify-between opacity-0 transition-opacity duration-300">
+                        <div>
+                          <h3 class="text-xs md:text-sm text-indigo-300 mb-1">Event Date</h3>
+                          <h2 class="text-xl md:text-xl font-bold mb-3 md:mb-3">Chess Tournament</h2>
+                          <p class="text-sm md:text-sm">This is a description of the event. It provides key details about what attendees can expect.</p>
+                        </div>
+                        <div class="mt-4">
+                          <a href="#event-link" class="inline-block bg-indigo-600 text-white py-2 px-4 md:py-2 md:px-4 rounded-md text-center text-sm md:text-base hover:bg-indigo-700 transition-colors duration-300">Register Now</a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="lg:w-1/3 sm:w-1/2 p-4 card">
-                    <div class="flex relative">
-                      <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
-                      <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                        <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                        <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  
+                  <!-- Card 2 -->
+                  <div class="event-card bg-white rounded-lg overflow-hidden shadow-md w-full mx-auto border border-gray-200">
+                    <div class="relative h-[960px] md:h-72">
+                      <img src="/NexGen/uploads/QUIZ TIME.jpg" alt="Quiz Tournament" class="w-full h-full object-contain bg-gray-100 p-2">
+                      <div class="event-overlay absolute inset-0 bg-black bg-opacity-90 text-white p-5 flex flex-col justify-between opacity-0 transition-opacity duration-300">
+                        <div>
+                          <h3 class="text-xs md:text-sm text-indigo-300 mb-1">Event Date</h3>
+                          <h2 class="text-xl md:text-xl font-bold mb-3 md:mb-3">Quiz Tournament</h2>
+                          <p class="text-sm md:text-sm">This is a description of the event. It provides key details about what attendees can expect.</p>
+                        </div>
+                        <div class="mt-4">
+                          <a href="#event-link" class="inline-block bg-indigo-600 text-white py-2 px-4 md:py-2 md:px-4 rounded-md text-center text-sm md:text-base hover:bg-indigo-700 transition-colors duration-300">Register Now</a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <!-- Repeat other cards -->
+                  
+                  <!-- Card 3 -->
+                  <div class="event-card bg-white rounded-lg overflow-hidden shadow-md w-full mx-auto border border-gray-200">
+                    <div class="relative h-[960px] md:h-72">
+                      <img src="/NexGen/uploads/QUIZ TIME.jpg" alt="Quiz Tournament" class="w-full h-full object-contain bg-gray-100 p-2">
+                      <div class="event-overlay absolute inset-0 bg-black bg-opacity-90 text-white p-5 flex flex-col justify-between opacity-0 transition-opacity duration-300">
+                        <div>
+                          <h3 class="text-xs md:text-sm text-indigo-300 mb-1">Event Date</h3>
+                          <h2 class="text-xl md:text-xl font-bold mb-3 md:mb-3">Quiz Tournament</h2>
+                          <p class="text-sm md:text-sm">This is a description of the event. It provides key details about what attendees can expect.</p>
+                        </div>
+                        <div class="mt-4">
+                          <a href="#event-link" class="inline-block bg-indigo-600 text-white py-2 px-4 md:py-2 md:px-4 rounded-md text-center text-sm md:text-base hover:bg-indigo-700 transition-colors duration-300">Register Now</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
-            
+              
               <style>
-                /* Inline CSS for camera reel and animation */
-                .camera-reel {
-                  display: flex;
-                  overflow: hidden;
-                  animation: slide 20s linear infinite;
+                /* Custom hover styles to supplement Tailwind */
+                .event-card:hover .event-overlay {
+                  opacity: 1;
                 }
-            
-                .card {
-                  transition: transform 0.3s ease;
-                  position: relative;
-                  animation: trend 1s ease-in-out infinite alternate; /* Trend effect */
+                
+                /* Very simple fade-in animation */
+                @keyframes simpleFadeIn {
+                  from { opacity: 0; }
+                  to { opacity: 1; }
                 }
-            
-                .card:hover {
-                  animation: shake 1s infinite;
-                  animation-timing-function: ease-in-out;
+                
+                /* Simple reliable styles for all devices */
+                .event-card {
+                  animation: simpleFadeIn 0.5s ease-out forwards;
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
                 }
-            
-                @keyframes slide {
-                  0% {
-                    transform: translateX(0);
-                  }
-                  100% {
-                    transform: translateX(-100%);
-                  }
-                }
-            
-                @keyframes trend {
-                  0% {
-                    transform: translateY(0);
-                  }
-                  50% {
-                    transform: translateY(20px);
-                  }
-                  100% {
-                    transform: translateY(-20px);
-                  }
-                }
-            
-                @keyframes shake {
-                  0% {
-                    transform: translateY(0);
-                  }
-                  25% {
+                
+                /* Desktop hover styles - extremely simple and reliable */
+                @media (min-width: 769px) {
+                  .event-card:hover {
                     transform: translateY(-15px);
+                    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
                   }
-                  50% {
-                    transform: translateY(15px);
+                }
+                
+                /* Mobile-specific styles */
+                @media (max-width: 768px) {
+                  .container {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                    max-width: 100% !important;
+                    width: 100% !important;
                   }
-                  75% {
-                    transform: translateY(-15px);
+                  
+                  .event-card {
+                    margin-bottom: 3rem;
+                    width: 96% !important;
+                    margin-left: 2% !important;
+                    margin-right: 2% !important;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
                   }
-                  100% {
-                    transform: translateY(15px);
+                  
+                  /* Content containment styles */
+                  .event-overlay {
+                    padding: 16px !important;
+                    box-sizing: border-box !important;
+                  }
+                  
+                  .event-overlay h2 {
+                    font-size: 1.25rem !important;
+                    word-break: break-word;
+                    margin-bottom: 0.5rem !important;
+                  }
+                  
+                  .event-overlay p {
+                    font-size: 0.875rem !important;
+                    line-height: 1.4 !important;
+                    max-height: 3.8em !important;
+                    overflow: hidden !important;
+                    text-overflow: ellipsis !important;
+                  }
+                  
+                  .event-overlay a {
+                    font-size: 0.875rem !important;
+                    padding: 6px 12px !important;
+                    margin-top: 1rem !important;
+                  }
+                  
+                  /* Make overlay visible on touch for mobile */
+                  .event-card.active .event-overlay {
+                    opacity: 1;
                   }
                 }
               </style>
-            
+              
               <script>
-                // Inline JS for automatic sliding and stopping on hover
-                const cameraReel = document.querySelector('.camera-reel');
-                const cards = document.querySelectorAll('.card');
-            
-                let isHovered = false;
-                let hoveredCard = null;
-            
-                // Pause the slide when the user hovers over any card and stop its animation
-                cards.forEach(card => {
-                  card.addEventListener('mouseenter', () => {
-                    isHovered = true;
-                    hoveredCard = card; // Track which card is hovered
-                    cameraReel.style.animationPlayState = 'paused'; // Stop the entire reel
-                    card.style.animationPlayState = 'paused'; // Stop this card's animation
-                  });
-            
-                  card.addEventListener('mouseleave', () => {
-                    isHovered = false;
-                    hoveredCard = null;
-                    cameraReel.style.animationPlayState = 'running'; // Resume sliding for the entire reel
-                    card.style.animationPlayState = 'running'; // Resume animation for this card
-                  });
-                });
-            
-                // Slide continuously
-                function slide() {
-                  if (!isHovered) {
-                    cameraReel.style.animation = 'slide 20s linear infinite';
+                document.addEventListener('DOMContentLoaded', function() {
+                  const eventCards = document.querySelectorAll('.event-card');
+                  const isMobile = window.innerWidth < 768;
+                  
+                  // No animation setup in JS - using pure CSS for reliability
+                  
+                  if (isMobile) {
+                    // Use click for mobile with toggle behavior
+                    eventCards.forEach(card => {
+                      card.addEventListener('click', function(e) {
+                        const overlay = this.querySelector('.event-overlay');
+                        
+                        // Pure toggle behavior - if overlay is shown, hide it; if hidden, show it
+                        if (window.getComputedStyle(overlay).opacity === '1') {
+                          // Hide overlay
+                          overlay.style.opacity = '0';
+                          this.classList.remove('active');
+                        } else {
+                          // Hide all other overlays first
+                          eventCards.forEach(c => {
+                            c.classList.remove('active');
+                            const otherOverlay = c.querySelector('.event-overlay');
+                            otherOverlay.style.opacity = '0';
+                          });
+                          
+                          // Show this overlay
+                          overlay.style.opacity = '1';
+                          this.classList.add('active');
+                        }
+                      });
+                      
+                      // Handle register button clicks separately
+                      const registerButton = card.querySelector('a');
+                      if (registerButton) {
+                        registerButton.addEventListener('click', function(e) {
+                          e.stopPropagation(); // Prevent triggering the card click
+                        });
+                      }
+                    });
+                    
+                    // Hide overlays when clicking outside cards
+                    document.addEventListener('click', function(e) {
+                      if (!e.target.closest('.event-card')) {
+                        eventCards.forEach(card => {
+                          card.classList.remove('active');
+                          const overlay = card.querySelector('.event-overlay');
+                          overlay.style.opacity = '0';
+                        });
+                      }
+                    });
                   }
-                }
-            
-                // Trigger the slide function
-                setInterval(slide, 10);
+                });
               </script>
             </section>
+            
+            <!-- Heartbeat Section -->
             <section class="text-gray-600 body-font" id="heartbeat-section" style="opacity: 0; transition: opacity 0.5s ease-in-out;">
               <div class="container px-5 py-24 mx-auto">
                 <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
                     <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
                   </svg>
-                  <p class="leading-relaxed text-lg">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware. Man bun next level coloring book skateboard four loko knausgaard. Kitsch keffiyeh master cleanse direct trade indigo juice before they sold out gentrify plaid gastropub normcore XOXO 90's pickled cindigo jean shorts. Slow-carb next level shoindigoitch ethical authentic, yr scenester sriracha forage franzen organic drinking vinegar.</p>
+                  <p class="leading-relaxed text-lg heartbeat-text">
+                    The NexGen, the Premier Celebration of Creativity and Innovation in Computer Science and Application !! 
+                    <br>Join us for an exhilarating showcase of talent & skills,  in a collaboration of both technology and the arts. Whether you're a tech enthusiast, an aspiring artist, or a music lover, NexGen offers something for everyone.
+                    
+                    Connect with us to witness the remarkable skills of our participants, enjoy highlights from the events, and be inspired by the powerful fusion of technology and creativity.
+                    
+                    <br><strong> "Let's code, create, and celebrate together!"</strong></p>
                   <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
                 </div>
               </div>
@@ -474,16 +540,16 @@ canvas#noise,
                     opacity: 1;
                   }
                   25% {
-                    transform: scale(1.1);
-                    opacity: 1.2;
+                    transform: scale(1.05);
+                    opacity: 1.1;
                   }
                   50% {
                     transform: scale(1);
                     opacity: 1;
                   }
                   75% {
-                    transform: scale(1.1);
-                    opacity: 1.2;
+                    transform: scale(1.05);
+                    opacity: 1.1;
                   }
                   100% {
                     transform: scale(1);
@@ -492,8 +558,39 @@ canvas#noise,
                 }
             
                 #heartbeat-section.appear {
-                  animation: heartbeat 5.0s ease-in-out infinite;
+                  animation: heartbeat 8.0s ease-in-out infinite;
                   opacity: 1 !important;
+                }
+                
+                /* Mobile text adjustments */
+                @media (max-width: 768px) {
+                  .heartbeat-text {
+                    font-size: 0.95rem !important;
+                    line-height: 1.6 !important;
+                  }
+                  
+                  /* Smoother animation on mobile */
+                  @keyframes heartbeat {
+                    0% {
+                      transform: scale(1);
+                    }
+                    25% {
+                      transform: scale(1.03);
+                    }
+                    50% {
+                      transform: scale(1);
+                    }
+                    75% {
+                      transform: scale(1.03);
+                    }
+                    100% {
+                      transform: scale(1);
+                    }
+                  }
+                  
+                  #heartbeat-section.appear {
+                    animation-duration: 10s;
+                  }
                 }
               `;
               document.head.appendChild(style);
@@ -536,136 +633,91 @@ canvas#noise,
             <section class="text-gray-600 body-font">
               <div class="container px-5 py-24 mx-auto">
                 <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Pitchfork Kickstarter Taxidermy</h1>
-                  <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p>
+                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Contact Us</h1>
+                  <!-- <p class="lg:w-1/2 w-full leading-relaxed text-gray-500"></p> -->
                 </div>
-                <div class="flex flex-wrap -m-4">
-                  <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
-                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg>
-                      </div>
-                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
-                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
-                    </div>
-                  </div>
-                  <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
-                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                          <circle cx="6" cy="6" r="3"></circle>
-                          <circle cx="6" cy="18" r="3"></circle>
-                          <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-                        </svg>
-                      </div>
-                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">The Catalyzer</h2>
-                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
-                    </div>
-                  </div>
-                  <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
-                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+
+                <div class="flex flex-wrap -mx-4 justify-center">
+                  <!-- Card 1 -->
+                  <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
+                    <div class="border border-gray-200 p-6 rounded-lg w-full max-w-sm mx-auto transform transition duration-500 hover:scale-105 hover:shadow-lg text-center">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 mx-auto">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
                           <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
                           <circle cx="12" cy="7" r="4"></circle>
                         </svg>
                       </div>
-                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Neptune</h2>
-                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                      <p class="leading-relaxed text-base text-indigo-500 font-medium text-center"> Designation </p>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2 member-name text-center mx-auto">
+                        <a href="https://linkedin.com/in/sanjay-mandal" target="_blank" class="hover:text-indigo-500 transition-colors duration-300"> Name </a>
+                      </h2>
+                      <p class="leading-relaxed text-sm text-gray-600 text-center">
+                        <a href="tel:+919876543210" class="hover:text-indigo-500 transition-colors duration-300">+91 98765 43210</a>
+                      </p>
                     </div>
                   </div>
-                  <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
-                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+
+                  <!-- Card 2 -->
+                  <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
+                    <div class="border border-gray-200 p-6 rounded-lg w-full max-w-sm mx-auto transform transition duration-500 hover:scale-105 hover:shadow-lg text-center">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 mx-auto">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                          <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
+                          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
                         </svg>
                       </div>
-                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Melanchole</h2>
-                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                      <p class="leading-relaxed text-base text-indigo-500 font-medium text-center">Designation</p>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2 member-name text-center mx-auto">
+                        <a href="https://linkedin.com/in/sanjay-mandal" target="_blank" class="hover:text-indigo-500 transition-colors duration-300"> Name </a>
+                      </h2>
+                      <p class="leading-relaxed text-sm text-gray-600 text-center">
+                        <a href="tel:+919876543210" class="hover:text-indigo-500 transition-colors duration-300">+91 98765 43210</a>
+                      </p>
                     </div>
                   </div>
-                  <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
-                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+
+                  <!-- Card 3 -->
+                  <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
+                    <div class="border border-gray-200 p-6 rounded-lg w-full max-w-sm mx-auto transform transition duration-500 hover:scale-105 hover:shadow-lg text-center">
+                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 mx-auto">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
                         </svg>
                       </div>
-                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Bunker</h2>
-                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                      <p class="leading-relaxed text-base text-indigo-500 font-medium text-center">Designation</p>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2 member-name text-center mx-auto">
+                        <a href="https://linkedin.com/in/sanjay-mandal" target="_blank" class="hover:text-indigo-500 transition-colors duration-300"> Name </a>
+                      </h2>
+                      <p class="leading-relaxed text-sm text-gray-600 text-center">
+                        <a href="tel:+919876543210" class="hover:text-indigo-500 transition-colors duration-300">+91 98765 43210</a>
+                      </p>
                     </div>
                   </div>
-                  <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
-                      <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                      </div>
-                      <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Ramona Falls</h2>
-                      <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Feedback</button>
-              </div>
-            </section>
+                    
+
 
           
         <!-- #primary -->
         <div class="scroll-to-top hoverable"></div>
+
       </div>
       <!-- #content -->
       <footer class="footer-nexgen">
         <div class="content has-text-centered">
-         <div class="content has-text-centered">
           <div id="footer-social" class="col">
-            <a href="https://www.facebook.com/genpt" target="_blank">
+            <a href="https://www.facebook.com/people/NexGen/61558566181617/" target="_blank">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/yourusername/" target="_blank">
+            <a href="https://www.instagram.com/nexgen_gm/" target="_blank">
               <i class="fab fa-instagram"></i>
             </a>
-           <!-- Website Hyperlink Icon -->
+            <!-- Website Hyperlink Icon -->
             <a href="https://sites.google.com/view/nexgengm/" target="_blank">
               <i class="fas fa-link"></i>
             </a>
-
           </div>
 
-          <div id="footer-navigation" class="col">
-            <div class="menu-footer-menu-pt-container">
-              <ul id="footer-menu" class="menu">
-                <li id="menu-item-338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-338">
-                  <a target="_blank" href="https://suporte.nexgen.pt">Suporte</a>
-                </li>
-                <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333">
-                  <a href="/perguntas-e-respostas/">FAQs</a>
-                </li>
-                <li id="menu-item-335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-335">
-                  <a href="/blog/">Blog</a>
-                </li>
-                <li id="menu-item-2110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2110">
-                  <a href="/newsletter/">Newsletter</a>
-                </li>
-                <li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-336">
-                  <a href="/contactos/">Contactos</a>
-                </li>
-                <li id="menu-item-334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334">
-                  <a href="/termos-e-condicoes/">Termos &#038; Condições</a>
-                </li>
-                <li id="menu-item-337" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-337">
-                  <a rel="privacy-policy" href="/politica-de-privacidade/">Política de Privacidade</a>
-                </li>
-                <li id="menu-item-2220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2220">
-                  <a target="_blank" href="https://www.livroreclamacoes.pt/inicio">Livro de Reclamações</a>
-                </li>
-              </ul>
-            </div>
-          </div>
           <div class="footer-flags">
             <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-touch-device wpml-ls-legacy-list-horizontal">
               <ul>
@@ -677,7 +729,7 @@ canvas#noise,
               </ul>
             </div>
           </div>
-          <p> NexGen &copy; 2025 - <a href="tel:00351218640637">+351 218 640 637</a> - <a href="mailto:geral@nexgen.pt">geral@nexgen.pt</a>
+          <p> NexGen &copy; 2025 - <a href="mailto:itsgmdcsa@gmail.com">itsgmdcsa@gmail.com</a>
             <br>
             <small>(Department Of Computer Science & Application , Gour Mahavidyalaya)</small>
           </p>
@@ -707,3 +759,29 @@ canvas#noise,
   </body>
   
 </html>
+
+<style>
+  /* Mobile responsive styles for member cards */
+  @media (max-width: 768px) {
+    .member-name {
+      font-size: 1rem !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center !important;
+      display: block;
+      width: 100%;
+    }
+    
+    /* Shift logo to the left in mobile view */
+    #logo-nexgen {
+      padding-left: 0 !important;
+      margin-left: -20px;
+    }
+    
+    .logo-nexgen {
+      text-align: left;
+      margin-left: -5px;
+    }
+  }
+</style>
