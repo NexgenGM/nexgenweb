@@ -13,27 +13,26 @@
         font-weight: normal;
         font-style: normal;
       }
-      
+
       img:is([sizes="auto"i], [sizes^="auto,"i]) {
         contain-intrinsic-size: 3000px 1500px
       }
-      
+
       h1 {
         font-family: 'Horndon', sans-serif;
       }
     </style>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>NexGen</title>
-
     <script>
       document.onkeydown = function(e) {
-          // Disable F12, Ctrl + Shift + I
-          if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
-              e.preventDefault();
-              alert("You cannot access developer tools!");
-          }
+        // Disable F12, Ctrl + Shift + I
+        if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
+          e.preventDefault();
+          alert("You cannot access developer tools!");
+        }
       };
-  </script>
+    </script>
     <style id='wp-emoji-styles-inline-css' type='text/css'>
       img.wp-smiley,
       img.emoji {
@@ -47,10 +46,10 @@
         background: none !important;
         padding: 0 !important;
       }
+
       #translator-popup {
         display: none !important;
-    }
-    
+      }
     </style>
     <style id='classic-theme-styles-inline-css' type='text/css'>
       /*! This file is auto-generated */
@@ -71,7 +70,6 @@
       }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
     <link rel='stylesheet' id='nexgen-style-css' href='style.css' type='text/css' media='all' />
     <style id='akismet-widget-style-inline-css' type='text/css'>
       .a-stats {
@@ -128,48 +126,39 @@
         line-height: 1.4;
         padding: 0 13px;
         white-space: nowrap;
-
       }
-    #particles-js canvas {
-      display: block;
-      position: absolute;
-      top: 0; left: 0;
-    z-index: -1;    
-    }
 
-    #particles-js,
-    canvas#noise,
-  .cursor {
-    pointer-events: none !important;
-  }
+      #particles-js canvas {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
 
+      #particles-js,
+      canvas#noise,
+      .cursor {
+        pointer-events: none !important;
+      }
     </style>
-    
-    <link rel="icon" href="logo.png" sizes="32x32" />
-    <link rel="icon" href="logo.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="logo.png" />
-    <meta name="msapplication-TileImage" content="logo.png" />
-
+    <link rel="icon" href="/img/logo.png" sizes="32x32" />
+    <link rel="icon" href="/img/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/img/logo.png" />
+    <meta name="msapplication-TileImage" content="/img/logo.png" />
   </head>
-  <body class="">
+  <body class="flex flex-col min-h-screen">
     <div class="cursor">
-      <div class="cursor__ball cursor__ball--big ">
-        <svg height="35" width="30">
+      <div class="cursor__ball cursor__ball--big "><svg height="35" width="30">
           <circle cx="15" cy="20" r="12" stroke-width="0"></circle>
-        </svg>
-      </div>
-      <div class="cursor__ball cursor__ball--small">
-        <svg height="10" width="10">
+        </svg></div>
+      <div class="cursor__ball cursor__ball--small"><svg height="10" width="10">
           <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
-        </svg>
-      </div>
-    </div>
-    <canvas id="noise" class="noise"></canvas>
+        </svg></div>
+    </div><canvas id="noise" class="noise"></canvas>
     <div class="nav-inside">
       <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
-
-      
-<!--       <script>
+      <!--       <script>
         particlesJS("particles-js", {
           particles: {
             number: {
@@ -233,18 +222,13 @@
           retina_detect: true
         });
       </script> -->
-      
-
-      
-      
-      
       <div class="nav__content">
         <ul class="nav__list">
           <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
             <a href="index.html">Home</a>
           </li>
           <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-66 current_page_item menu-item-68">
-            <a href="event.html" >Event</a>
+            <a href="event.html">Event</a>
           </li>
           <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
             <a href="gallery.html">Gallery</a>
@@ -254,16 +238,15 @@
           </li>
         </ul>
       </div>
+    </div><div id="page" class="container is-fluid is-marginless flex-grow">
 
-    </div>
-    <div id="page" class="container is-fluid is-marginless">
       <header id="nexgen-header" class="columns is-fluid is-marginless">
         <div class="column is-mobile is-vcentered">
           <div class="columns is-mobile is-vcentered">
             <div id="logo-nexgen" class="column">
               <div class="logo-nexgen">
                 <a href="index.html" rel="home">
-                  <img src="/NexGen/img/logo.png" alt="nexgen" class="logo hoverable" />
+                  <img src="/img/logo.png" alt="nexgen" class="logo hoverable" />
                 </a>
               </div>
             </div>
@@ -288,14 +271,12 @@
         <div id="loader-wrapper">
           <div id="loader">
             <div class="symbol-nexgen">
-              <img id="loading" src="/NexGen/img/logo.png" alt="nexgen logo" class="logo"/>
+              <img id="loading" src="/img/logo.png" alt="nexgen logo" class="logo" />
             </div>
           </div>
           <div class="loader-section section-left"></div>
           <div class="loader-section section-right"></div>
         </div>
-
-
         <canvas class="part"></canvas>
         <div class="mouse"></div>
         <div id="primary" class="section">
@@ -313,17 +294,14 @@
                 </div>
               </div>
             </div>
-
             <section class="text-gray-600 body-font">
               <div class="container px-5 py-24 mx-auto">
                 <div class="flex flex-col text-center w-full mb-20">
                   <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Current Events</h1>
                   <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Events that are currently open for registration</p>
                 </div>
-                
                 <!-- Event Cards Grid -->
                 <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 px-2 md:px-4" id="event-cards-container">
-                  
                   <!-- Card 1 -->
                   <div class="event-card bg-white rounded-lg overflow-hidden shadow-md w-full mx-auto border border-gray-200">
                     <div class="relative h-[960px] md:h-72">
@@ -340,7 +318,6 @@
                       </div>
                     </div>
                   </div>
-                  
                   <!-- Card 2 -->
                   <div class="event-card bg-white rounded-lg overflow-hidden shadow-md w-full mx-auto border border-gray-200">
                     <div class="relative h-[960px] md:h-72">
@@ -357,7 +334,6 @@
                       </div>
                     </div>
                   </div>
-                  
                   <!-- Card 3 -->
                   <div class="event-card bg-white rounded-lg overflow-hidden shadow-md w-full mx-auto border border-gray-200">
                     <div class="relative h-[960px] md:h-72">
@@ -374,28 +350,31 @@
                       </div>
                     </div>
                   </div>
-                  
                 </div>
               </div>
-              
               <style>
                 /* Custom hover styles to supplement Tailwind */
                 .event-card:hover .event-overlay {
                   opacity: 1;
                 }
-                
+
                 /* Very simple fade-in animation */
                 @keyframes simpleFadeIn {
-                  from { opacity: 0; }
-                  to { opacity: 1; }
+                  from {
+                    opacity: 0;
+                  }
+
+                  to {
+                    opacity: 1;
+                  }
                 }
-                
+
                 /* Simple reliable styles for all devices */
                 .event-card {
                   animation: simpleFadeIn 0.5s ease-out forwards;
                   transition: transform 0.3s ease, box-shadow 0.3s ease;
                 }
-                
+
                 /* Desktop hover styles - extremely simple and reliable */
                 @media (min-width: 769px) {
                   .event-card:hover {
@@ -403,7 +382,7 @@
                     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
                   }
                 }
-                
+
                 /* Mobile-specific styles */
                 @media (max-width: 768px) {
                   .container {
@@ -412,7 +391,7 @@
                     max-width: 100% !important;
                     width: 100% !important;
                   }
-                  
+
                   .event-card {
                     margin-bottom: 3rem;
                     width: 96% !important;
@@ -421,19 +400,19 @@
                     border-radius: 8px;
                     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
                   }
-                  
+
                   /* Content containment styles */
                   .event-overlay {
                     padding: 16px !important;
                     box-sizing: border-box !important;
                   }
-                  
+
                   .event-overlay h2 {
                     font-size: 1.25rem !important;
                     word-break: break-word;
                     margin-bottom: 0.5rem !important;
                   }
-                  
+
                   .event-overlay p {
                     font-size: 0.875rem !important;
                     line-height: 1.4 !important;
@@ -441,33 +420,29 @@
                     overflow: hidden !important;
                     text-overflow: ellipsis !important;
                   }
-                  
+
                   .event-overlay a {
                     font-size: 0.875rem !important;
                     padding: 6px 12px !important;
                     margin-top: 1rem !important;
                   }
-                  
+
                   /* Make overlay visible on touch for mobile */
                   .event-card.active .event-overlay {
                     opacity: 1;
                   }
                 }
               </style>
-              
               <script>
                 document.addEventListener('DOMContentLoaded', function() {
                   const eventCards = document.querySelectorAll('.event-card');
                   const isMobile = window.innerWidth < 768;
-                  
                   // No animation setup in JS - using pure CSS for reliability
-                  
                   if (isMobile) {
                     // Use click for mobile with toggle behavior
                     eventCards.forEach(card => {
                       card.addEventListener('click', function(e) {
                         const overlay = this.querySelector('.event-overlay');
-                        
                         // Pure toggle behavior - if overlay is shown, hide it; if hidden, show it
                         if (window.getComputedStyle(overlay).opacity === '1') {
                           // Hide overlay
@@ -480,13 +455,11 @@
                             const otherOverlay = c.querySelector('.event-overlay');
                             otherOverlay.style.opacity = '0';
                           });
-                          
                           // Show this overlay
                           overlay.style.opacity = '1';
                           this.classList.add('active');
                         }
                       });
-                      
                       // Handle register button clicks separately
                       const registerButton = card.querySelector('a');
                       if (registerButton) {
@@ -495,7 +468,6 @@
                         });
                       }
                     });
-                    
                     // Hide overlays when clicking outside cards
                     document.addEventListener('click', function(e) {
                       if (!e.target.closest('.event-card')) {
@@ -510,7 +482,6 @@
                 });
               </script>
             </section>
-            
             <!-- Heartbeat Section -->
             <section class="text-gray-600 body-font" id="heartbeat-section" style="opacity: 0; transition: opacity 0.5s ease-in-out;">
               <div class="container px-5 py-24 mx-auto">
@@ -518,18 +489,13 @@
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
                     <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
                   </svg>
-                  <p class="leading-relaxed text-lg heartbeat-text">
-                    The NexGen, the Premier Celebration of Creativity and Innovation in Computer Science and Application !! 
-                    <br>Join us for an exhilarating showcase of talent & skills,  in a collaboration of both technology and the arts. Whether you're a tech enthusiast, an aspiring artist, or a music lover, NexGen offers something for everyone.
-                    
-                    Connect with us to witness the remarkable skills of our participants, enjoy highlights from the events, and be inspired by the powerful fusion of technology and creativity.
-                    
-                    <br><strong> "Let's code, create, and celebrate together!"</strong></p>
+                  <p class="leading-relaxed text-lg heartbeat-text"> The NexGen, the Premier Celebration of Creativity and Innovation in Computer Science and Application !! <br>Join us for an exhilarating showcase of talent & skills, in a collaboration of both technology and the arts. Whether you're a tech enthusiast, an aspiring artist, or a music lover, NexGen offers something for everyone. Connect with us to witness the remarkable skills of our participants, enjoy highlights from the events, and be inspired by the powerful fusion of technology and creativity. <br>
+                    <strong> "Let's code, create, and celebrate together!"</strong>
+                  </p>
                   <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
                 </div>
               </div>
             </section>
-            
             <script>
               // Inline CSS for heartbeat animation
               const style = document.createElement('style');
@@ -594,10 +560,8 @@
                 }
               `;
               document.head.appendChild(style);
-            
               // JavaScript for handling scroll event with fallback for browsers that do not support IntersectionObserver
               const heartbeatSection = document.getElementById('heartbeat-section');
-            
               // Check for IntersectionObserver support
               if ('IntersectionObserver' in window) {
                 const observer = new IntersectionObserver((entries) => {
@@ -613,7 +577,6 @@
                 }, {
                   threshold: 0.5 // Trigger when 50% of the section is visible
                 });
-            
                 observer.observe(heartbeatSection);
               } else {
                 // Fallback for browsers that don't support IntersectionObserver
@@ -629,14 +592,12 @@
                 });
               }
             </script>
-            
             <section class="text-gray-600 body-font">
               <div class="container px-5 py-24 mx-auto">
                 <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
                   <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Contact Us</h1>
                   <!-- <p class="lg:w-1/2 w-full leading-relaxed text-gray-500"></p> -->
                 </div>
-
                 <div class="flex flex-wrap -mx-4 justify-center">
                   <!-- Card 1 -->
                   <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
@@ -656,7 +617,6 @@
                       </p>
                     </div>
                   </div>
-
                   <!-- Card 2 -->
                   <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
                     <div class="border border-gray-200 p-6 rounded-lg w-full max-w-sm mx-auto transform transition duration-500 hover:scale-105 hover:shadow-lg text-center">
@@ -675,7 +635,6 @@
                       </p>
                     </div>
                   </div>
-
                   <!-- Card 3 -->
                   <div class="xl:w-1/3 md:w-1/2 w-full p-4 flex justify-center">
                     <div class="border border-gray-200 p-6 rounded-lg w-full max-w-sm mx-auto transform transition duration-500 hover:scale-105 hover:shadow-lg text-center">
@@ -694,72 +653,58 @@
                       </p>
                     </div>
                   </div>
-                    
-
-
-          
-        <!-- #primary -->
-        <div class="scroll-to-top hoverable"></div>
-
-      </div>
-      <!-- #content -->
-      <footer class="footer-nexgen">
-        <div class="content has-text-centered">
-          <div id="footer-social" class="col">
-            <a href="https://www.facebook.com/people/NexGen/61558566181617/" target="_blank">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/nexgen_gm/" target="_blank">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <!-- Website Hyperlink Icon -->
-            <a href="https://sites.google.com/view/nexgengm/" target="_blank">
-              <i class="fas fa-link"></i>
-            </a>
-          </div>
-
-          <div class="footer-flags">
-            <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-touch-device wpml-ls-legacy-list-horizontal">
-              <ul>
-                <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
-                  <!-- <a href="/en/about-us/" class="wpml-ls-link">
-                    <img class="wpml-ls-flag" src="/wp-content/uploads/2020/04/logo.png" alt="Inglês" width=1000 height=30 />
-                  </a> -->
-                </li>
-              </ul>
-            </div>
-          </div>
-          <p> NexGen &copy; 2025 - <a href="mailto:itsgmdcsa@gmail.com">itsgmdcsa@gmail.com</a>
-            <br>
-            <small>(Department Of Computer Science & Application , Gour Mahavidyalaya)</small>
-          </p>
-        </div>
-      </footer>
-      
-      <!-- #colophon -->
-    </div>
-    <!-- #page -->
-    <span class="ht_ctc_chat_data" data-no_number="" data-settings="{&quot;number&quot;:&quot;351917906156&quot;,&quot;pre_filled&quot;:&quot;Ol\u00e1, visitei o site da nexgen, estava na p\u00e1gina &amp;quot;Quem Somos&amp;quot; e gostaria de falar um pouco. Pode ajudar-me?&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;display: none; cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 40px; left: 40px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 150px; right: 10px;&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:&quot;no-show-effects&quot;,&quot;ani&quot;:&quot;no-animations&quot;,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}"></span>
-    <link rel='stylesheet' id='quiz-maker-admin-css' href='admin.css' type='text/css' media='all' />
-    <script type="text/javascript" src="vendor.min.js" id="nexgen-vendor-js"></script>
-    <!-- Dot Liner -->
-    <script type="text/javascript" id="nexgen-main-js-extra">
-      /* 
-				<![CDATA[ */
-      var nexgen_main = {
-        "page": "nex",
-        "is_404": ""
-      };
-      
-      /* ]]> */
-    </script>
-    <script type="text/javascript" src="main.fixed.js" id="nexgen-main-js"></script>
- 
-
+                  <!-- #primary -->
+                  <div class="scroll-to-top hoverable"></div>
+                </div>
+                <!-- #content -->
+                <footer class="footer-nexgen">
+                  <div class="content has-text-centered">
+                    <div id="footer-social" class="col">
+                      <a href="https://www.facebook.com/people/NexGen/61558566181617/" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="https://www.instagram.com/nexgen_gm/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <!-- Website Hyperlink Icon -->
+                      <a href="https://sites.google.com/view/nexgengm/" target="_blank">
+                        <i class="fas fa-link"></i>
+                      </a>
+                    </div>
+                    <div class="footer-flags">
+                      <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-touch-device wpml-ls-legacy-list-horizontal">
+                        <ul>
+                          <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
+                            <!-- <a href="/en/about-us/" class="wpml-ls-link"><img class="wpml-ls-flag" src="/wp-content/uploads/2020/04//img/logo.png" alt="Inglês" width=1000 height=30 /></a> -->
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <p> NexGen &copy; 2025 - <a href="mailto:itsgmdcsa@gmail.com">itsgmdcsa@gmail.com</a>
+                      <br>
+                      <small>(Department Of Computer Science & Application , Gour Mahavidyalaya)</small>
+                    </p>
+                  </div>
+                </footer>
+                <!-- #colophon -->
+              </div>
+              <!-- #page -->
+              <!-- <span class="ht_ctc_chat_data" data-no_number="" data-settings="{&quot;number&quot;:&quot;351917906156&quot;,&quot;pre_filled&quot;:&quot;Ol\u00e1, visitei o site da nexgen, estava na p\u00e1gina &amp;quot;Quem Somos&amp;quot; e gostaria de falar um pouco. Pode ajudar-me?&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;display: none; cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 40px; left: 40px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 150px; right: 10px;&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:&quot;no-show-effects&quot;,&quot;ani&quot;:&quot;no-animations&quot;,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}"></span><link rel='stylesheet' id='quiz-maker-admin-css' href='admin.css' type='text/css' media='all' /> -->
+              <script type="text/javascript" src="vendor.min.js" id="nexgen-vendor-js"></script>
+              <!-- Dot Liner -->
+              <script type="text/javascript" id="nexgen-main-js-extra">
+                /* 
+				
+											<![CDATA[ */
+                var nexgen_main = {
+                  "page": "nex",
+                  "is_404": ""
+                };
+                /* ]]> */
+              </script>
+              <script type="text/javascript" src="main.fixed.js" id="nexgen-main-js"></script>
   </body>
-  
 </html>
-
 <style>
   /* Mobile responsive styles for member cards */
   @media (max-width: 768px) {
@@ -772,16 +717,20 @@
       display: block;
       width: 100%;
     }
-    
+
     /* Shift logo to the left in mobile view */
     #logo-nexgen {
       padding-left: 0 !important;
       margin-left: -20px;
     }
-    
+
     .logo-nexgen {
       text-align: left;
       margin-left: -5px;
     }
   }
+  .event-overlay {
+    overflow-y: auto;
+  }
+  
 </style>
