@@ -5,6 +5,7 @@
     <meta name="google" content="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <style>
       img:is([sizes="auto"i], [sizes^="auto,"i]) {
         contain-intrinsic-size: 3000px 1500px
@@ -12,16 +13,15 @@
     </style>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>NexGen</title>
-
     <script>
       document.onkeydown = function(e) {
-          // Disable F12, Ctrl + Shift + I
-          if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
-              e.preventDefault();
-              alert("You cannot access developer tools!");
-          }
+        // Disable F12, Ctrl + Shift + I
+        if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
+          e.preventDefault();
+          alert("You cannot access developer tools!");
+        }
       };
-  </script>
+    </script>
     <style id='wp-emoji-styles-inline-css' type='text/css'>
       img.wp-smiley,
       img.emoji {
@@ -35,10 +35,10 @@
         background: none !important;
         padding: 0 !important;
       }
+
       #translator-popup {
         display: none !important;
-    }
-    
+      }
     </style>
     <style id='classic-theme-styles-inline-css' type='text/css'>
       /*! This file is auto-generated */
@@ -58,10 +58,9 @@
         text-decoration: none
       }
     </style>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
     <link rel='stylesheet' id='nexgen-style-css' href='style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='nexgen-style-css' href='gallery.css' type='text/css' media='all' />
     <style id='akismet-widget-style-inline-css' type='text/css'>
       .a-stats {
         --akismet-color-mid-green: #357b49;
@@ -118,44 +117,43 @@
         padding: 0 13px;
         white-space: nowrap;
       }
-    </style>
-    
-    <link rel="icon" href="/wp-content/uploads/2020/04/logo.png" sizes="32x32" />
-    <link rel="icon" href="/wp-content/uploads/2020/04/logo.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="/wp-content/uploads/2020/04/logo.png" />
-    <meta name="msapplication-TileImage" content="/wp-content/uploads/2020/04/logo.png" />
 
+      #particles-js canvas {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      #particles-js,
+      canvas#noise,
+      .cursor {
+        pointer-events: none !important;
+      }
+    </style>
+    <link rel="icon" href="logo.png" sizes="32x32" />
+    <link rel="icon" href="logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="logo.png" />
+    <meta name="msapplication-TileImage" content="logo.png" />
   </head>
   <body class="">
     <div class="cursor">
-      <div class="cursor__ball cursor__ball--big ">
-        <svg height="35" width="30">
+      <div class="cursor__ball cursor__ball--big "><svg height="35" width="30">
           <circle cx="15" cy="20" r="12" stroke-width="0"></circle>
-        </svg>
-      </div>
-      <div class="cursor__ball cursor__ball--small">
-        <svg height="10" width="10">
+        </svg></div>
+      <div class="cursor__ball cursor__ball--small"><svg height="10" width="10">
           <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
-        </svg>
-      </div>
-    </div>
-    <canvas id="noise" class="noise"></canvas>
+        </svg></div>
+    </div><canvas id="noise" class="noise"></canvas>
     <div class="nav-inside">
-
+      <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
       <div class="nav__content">
         <ul class="nav__list">
-          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
-            <a href="index.html">Home</a>
-          </li>
-          <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-66 current_page_item menu-item-68">
-            <a href="event.html" >Event</a>
-          </li>
-          <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
-            <a href="about.html">About</a>
-          </li>
-          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
-            <a href="gallery.html">Gallery</a>
-          </li>
+          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="index.html">Home</a></li>
+          <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-66 current_page_item menu-item-68"><a href="event.html">Event</a></li>
+          <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="about.html">About</a></li>
+          <li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="gallery.html">Gallery</a></li>
         </ul>
       </div>
     </div>
@@ -164,11 +162,7 @@
         <div class="column is-mobile is-vcentered">
           <div class="columns is-mobile is-vcentered">
             <div id="logo-nexgen" class="column">
-              <div class="logo-nexgen">
-                <a href="index.html" rel="home">
-                  <img src="/wp-content/uploads/2020/04/logo.png" alt="nexgen" class="logo hoverable" />
-                </a>
-              </div>
+              <div class="logo-nexgen"><a href="index.html" rel="home"><img src="logo.png" alt="nexgen" class="logo hoverable" /></a></div>
             </div>
             <!-- .site-branding -->
             <div class="column is-narrow">
@@ -185,244 +179,129 @@
         </div>
         <!-- #site-navigation -->
       </header>
-      <!-- #masthead -->
-      <div id="content" class="content div-top-middle">
-        <div id="loader-wrapper">
-          <div id="loader">
+      <!-- #masthead --><div id="content" class="content div-top-middle"><div id="loader-wrapper"><div id="loader">
             <div class="symbol-nexgen">
-              <img id="loading" src="/wp-content/themes/gen/img/raw/logo.png" alt="nexgen logo" class="logo" />
+              <img id="loading" src="logo.png" alt="nexgen logo" class="logo" />
             </div>
-          </div>
-          <div class="loader-section section-left"></div>
-          <div class="loader-section section-right"></div>
-        </div>
-        <canvas class="part"></canvas>
-        <div class="mouse"></div>
-        <div id="primary" class="section">
-          <main id="main" class="container is-marginless is-fluid">
+          </div><div class="loader-section section-left"></div><div class="loader-section section-right"></div></div><canvas class="part"></canvas><div class="mouse"></div><div id="primary" class="section"><main id="main" class="container is-marginless is-fluid">
             <div class="shadow-title parallax-top-shadow">NEXGEN</div>
             <div class="section full-height">
               <div class="section-title-wrap">
                 <div class="container">
                   <div class="columns">
                     <div class="column parallax-fade-top">
-                      <!-- <div class="sub-heading">Let's Code ,Create & Celebrate Together</div> -->
-                      <h1>Gallery</h1>
+                      <div class="sub-heading">Let's Code ,Create & Celebrate Together</div>
+                      <h1>GALLERY</h1>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <section class="text-gray-600 body-font">
-              <div class="container px-5 py-24 mx-auto">
-                <div class="flex flex-col text-center w-full mb-20">
-                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
-                  <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+            <div class="album">
+              <div class="responsive-container-block bg">
+                <div class="responsive-container-block img-cont">
+                  <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.4.svg">
+                  <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.5.svg">
+                  <img class="img img-last" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.6.svg">
                 </div>
-                <div class="flex flex-wrap -m-4">
-                  <div class="lg:w-1/3 sm:w-1/2 p-4">
-                    <div class="flex relative card">
-                      <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
-                      <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                        <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                        <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="lg:w-1/3 sm:w-1/2 p-4">
-                    <div class="flex relative card">
-                      <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
-                      <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                        <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                        <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="lg:w-1/3 sm:w-1/2 p-4">
-                    <div class="flex relative card">
-                      <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
-                      <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                        <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                        <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="lg:w-1/3 sm:w-1/2 p-4">
-                    <div class="flex relative card">
-                      <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
-                      <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                        <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                        <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="lg:w-1/3 sm:w-1/2 p-4">
-                    <div class="flex relative card">
-                      <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
-                      <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                        <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                        <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="lg:w-1/3 sm:w-1/2 p-4">
-                    <div class="flex relative card">
-                      <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/600x360">
-                      <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                        <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                        <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Repeat other cards -->
-                  <!-- You can replicate the above div structure for other cards. -->
+                <div class="responsive-container-block img-cont">
+                  <img class="img img-big" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.11.svg">
+                  <img class="img img-big img-last" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.10.svg">
+                </div>
+                <div class="responsive-container-block img-cont">
+                  <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.7.svg">
+                  <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.8.svg">
+                  <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.9.svg">
                 </div>
               </div>
-         
-            
-            <style>
-              /* Card Zoom Effect */
-              .card {
-                transition: transform 0.3s ease-in-out;
-                position: relative;
-              }
-            
-              .card:hover {
-                transform: scale(1.05); /* Zoom in effect */
-              }
-            
-              /* Ensure the hover opacity change also works with zoom effect */
-              .card:hover .opacity-0 {
-                opacity: 1;
-              }
-            
-              /* For all cards, animate the zoom-out effect when not hovered */
-              .card img {
-                transition: transform 0.3s ease-in-out;
-              }
-            </style>
-          </section>
-          <section class="text-gray-600 body-font">
-            <div class="container px-5 py-24 mx-auto flex flex-wrap">
-              <div class="flex w-full mb-20 flex-wrap">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Master Cleanse Reliac Heirloom</h1>
-                <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
-              </div>
-              <div class="flex flex-wrap md:-m-2 -m-1">
-                <div class="flex flex-wrap w-1/2">
-                  <div class="md:p-2 p-1 w-1/2">
-                    <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300">
-                  </div>
-                  <div class="md:p-2 p-1 w-1/2">
-                    <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301">
-                  </div>
-                  <div class="md:p-2 p-1 w-full">
-                    <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360">
-                  </div>
-                </div>
-                <div class="flex flex-wrap w-1/2">
-                  <div class="md:p-2 p-1 w-full">
-                    <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361">
-                  </div>
-                  <div class="md:p-2 p-1 w-1/2">
-                    <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
-                  </div>
-                  <div class="md:p-2 p-1 w-1/2">
-                    <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
-                  </div>
-                </div>
-              </div>
+              <button id="seeMoreBtn" class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"> See More </button>
             </div>
-          </section>
-            
-          
-        <!-- #primary -->
-        <div class="scroll-to-top hoverable"></div>
-      </div>
-      <!-- #content -->
-      <footer class="footer-nexgen">
-        <div class="content has-text-centered">
-          <div id="footer-social" class="col">
-            <a href="https://www.facebook.com/genpt" target="_blank">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com/genPT" target="_blank">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.linkedin.com/company-beta/3527447/" target="_blank">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-          <div id="footer-navigation" class="col">
-            <div class="menu-footer-menu-pt-container">
-              <ul id="footer-menu" class="menu">
-                <li id="menu-item-338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-338">
-                  <a target="_blank" href="https://suporte.nexgen.pt">Suporte</a>
-                </li>
-                <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333">
-                  <a href="/perguntas-e-respostas/">FAQs</a>
-                </li>
-                <li id="menu-item-335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-335">
-                  <a href="/blog/">Blog</a>
-                </li>
-                <li id="menu-item-2110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2110">
-                  <a href="/newsletter/">Newsletter</a>
-                </li>
-                <li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-336">
-                  <a href="/contactos/">Contactos</a>
-                </li>
-                <li id="menu-item-334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334">
-                  <a href="/termos-e-condicoes/">Termos &#038; Condições</a>
-                </li>
-                <li id="menu-item-337" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-337">
-                  <a rel="privacy-policy" href="/politica-de-privacidade/">Política de Privacidade</a>
-                </li>
-                <li id="menu-item-2220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2220">
-                  <a target="_blank" href="https://www.livroreclamacoes.pt/inicio">Livro de Reclamações</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-flags">
-            <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-touch-device wpml-ls-legacy-list-horizontal">
-              <ul>
-                <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
-                  <!-- <a href="/en/about-us/" class="wpml-ls-link">
-                    <img class="wpml-ls-flag" src="/wp-content/uploads/2020/04/logo.png" alt="Inglês" width=1000 height=30 />
-                  </a> -->
-                </li>
-              </ul>
-            </div>
-          </div>
-          <p> NexGen &copy; 2025 - <a href="tel:00351218640637">+351 218 640 637</a> - <a href="mailto:geral@nexgen.pt">geral@nexgen.pt</a>
-            <br>
-            <small>(Department Of Computer Science & Application , Gour Mahavidyalaya)</small>
-          </p>
+            <script>
+              document.getElementById('seeMoreBtn').addEventListener('click', function() {
+                window.location.href = 'https://sites.google.com/view/nexgengm/gallery'; // Redirect to the URL
+              });
+            </script>
+            <!-- #primary -->
+            <div class="scroll-to-top hoverable"></div>
         </div>
-      </footer>
-      
-      <!-- #colophon -->
-    </div>
-    <!-- #page -->
-    <span class="ht_ctc_chat_data" data-no_number="" data-settings="{&quot;number&quot;:&quot;351917906156&quot;,&quot;pre_filled&quot;:&quot;Ol\u00e1, visitei o site da nexgen, estava na p\u00e1gina &amp;quot;Quem Somos&amp;quot; e gostaria de falar um pouco. Pode ajudar-me?&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;display: none; cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 40px; left: 40px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 150px; right: 10px;&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:&quot;no-show-effects&quot;,&quot;ani&quot;:&quot;no-animations&quot;,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}"></span>
-    <script type="text/javascript" src="vendor.min.js" id="nexgen-vendor-js"></script>
-    <!-- Dot Liner -->
-    <script type="text/javascript" id="nexgen-main-js-extra">
-      /* 
-				<![CDATA[ */
-      var nexgen_main = {
-        "page": "nex",
-        "is_404": ""
-      };
-      
-      /* ]]> */
-    </script>
-    <script type="text/javascript" src="main.fixed.js" id="nexgen-main-js"></script>
+        <!-- #content -->
+        <footer class="footer-nexgen">
+          <div class="content has-text-centered">
+            <div class="content has-text-centered">
+              <div id="footer-social" class="col">
+                <a href="https://www.facebook.com/genpt" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/yourusername/" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <!-- Website Hyperlink Icon -->
+                <a href="https://sites.google.com/view/nexgengm/" target="_blank">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+              <div id="footer-navigation" class="col">
+                <div class="menu-footer-menu-pt-container">
+                  <ul id="footer-menu" class="menu">
+                    <li id="menu-item-338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-338">
+                      <a target="_blank" href="https://suporte.nexgen.pt">Suporte</a>
+                    </li>
+                    <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333">
+                      <a href="/perguntas-e-respostas/">FAQs</a>
+                    </li>
+                    <li id="menu-item-335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-335">
+                      <a href="/blog/">Blog</a>
+                    </li>
+                    <li id="menu-item-2110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2110">
+                      <a href="/newsletter/">Newsletter</a>
+                    </li>
+                    <li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-336">
+                      <a href="/contactos/">Contactos</a>
+                    </li>
+                    <li id="menu-item-334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334">
+                      <a href="/termos-e-condicoes/">Termos &#038; Condições</a>
+                    </li>
+                    <li id="menu-item-337" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-337">
+                      <a rel="privacy-policy" href="/politica-de-privacidade/">Política de Privacidade</a>
+                    </li>
+                    <li id="menu-item-2220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2220">
+                      <a target="_blank" href="https://www.livroreclamacoes.pt/inicio">Livro de Reclamações</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-flags">
+                <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-touch-device wpml-ls-legacy-list-horizontal">
+                  <ul>
+                    <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
+                      <!-- <a href="/en/about-us/" class="wpml-ls-link"><img class="wpml-ls-flag" src="/wp-content/uploads/2020/04/logo.png" alt="Inglês" width=1000 height=30 /></a> -->
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p> NexGen &copy; 2025 - <a href="tel:00351218640637">+351 218 640 637</a> - <a href="mailto:geral@nexgen.pt">geral@nexgen.pt</a>
+                <br>
+                <small>(Department Of Computer Science & Application , Gour Mahavidyalaya)</small>
+              </p>
+            </div>
+        </footer>
+        <!-- #colophon -->
+      </div>
+      <!-- #page -->
+      <span class="ht_ctc_chat_data" data-no_number="" data-settings="{&quot;number&quot;:&quot;351917906156&quot;,&quot;pre_filled&quot;:&quot;Ol\u00e1, visitei o site da nexgen, estava na p\u00e1gina &amp;quot;Quem Somos&amp;quot; e gostaria de falar um pouco. Pode ajudar-me?&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;display: none; cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 40px; left: 40px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 150px; right: 10px;&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:&quot;no-show-effects&quot;,&quot;ani&quot;:&quot;no-animations&quot;,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}"></span>
+      <link rel='stylesheet' id='quiz-maker-admin-css' href='admin.css' type='text/css' media='all' />
+      <script type="text/javascript" src="vendor.min.js" id="nexgen-vendor-js"></script>
+      <!-- Dot Liner -->
+      <script type="text/javascript" id="nexgen-main-js-extra">
+        /* 
+				
+									<![CDATA[ */
+        var nexgen_main = {
+          "page": "nex",
+          "is_404": ""
+        };
+        /* ]]> */
+      </script>
+      <script type="text/javascript" src="main.fixed.js" id="nexgen-main-js"></script>
   </body>
 </html>
